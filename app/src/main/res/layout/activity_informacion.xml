@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformacionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verde"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_smoke"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lyPrin"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/verde"
+                android:background="@drawable/layout_principal_curvasabajo"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registrarse"
+                    android:drawableLeft="@drawable/add_circle"
+                    android:drawablePadding="-110dp"
+                    android:paddingLeft="80dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_curverightsuperior"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:text="2"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:backgroundTint="@color/verde"
+                android:background="@drawable/btn_circulo">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="30dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <TextView
+                        android:id="@+id/encabezado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Información"
+                        android:textStyle="bold"
+                        android:textColor="@color/gris_tabla"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:text="Género"
+                        android:layout_marginTop="8dp"
+                        android:gravity="left"
+                        android:layout_marginStart="6dp"
+                        android:textStyle="bold"
+                        android:textColor="#3C3C3C"
+                        android:textSize="16sp" />
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rbMas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M"
+                        android:textColor="@color/azul"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        >
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbFem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/rose"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        >
+                    </RadioButton>
+                    <EditText
+                        android:id="@+id/edGenero"
+                        android:layout_width="136dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="24dp"
+                        android:inputType="text"
+                        android:background="@drawable/curves"
+                        android:hint="Otro (especificar)"
+                        android:padding="2dp"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edEdad"
+                        android:layout_width="260dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/curves"
+                        android:hint="Edad"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/calendario"
+                        android:layout_marginTop="18dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edOcupacion"
+                        android:layout_width="260dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/curves"
+                        android:gravity="center"
+                        android:ems="10"
+                        android:hint="Ocupación"
+                        android:inputType="text"
+                        android:layout_marginTop="18dp"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/ocupacion"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edPais"
+                        android:layout_width="260dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/curves"
+                        android:gravity="center"
+                        android:ems="10"
+                        android:hint="País"
+                        android:inputType="text"
+                        android:layout_marginTop="18dp"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/pais_2"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edCiudad"
+                        android:layout_width="260dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/curves"
+                        android:gravity="center"
+                        android:ems="10"
+                        android:hint="Ciudad"
+                        android:inputType="text"
+                        android:layout_marginTop="18dp"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/pais"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        >
+
+                        <Button
+                            android:id="@+id/btnAnte"
+                            android:layout_width="120dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/button_rouned"
+                            android:backgroundTint="@color/azul"
+                            android:text="Anterior"
+                            android:paddingEnd="10dp"
+                            android:drawableLeft="@drawable/anterior"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/btnSig"
+                            android:layout_width="120dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/button_rouned"
+                            android:backgroundTint="@color/verde"
+                            android:text="Siguiente"
+                            android:paddingStart="10dp"
+                            android:layout_marginStart="20dp"
+                            android:drawableRight="@drawable/siguiente"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="278dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4A4A4A"
+                    android:paddingStart="6dp"
+                    android:textSize="16sp"
+                    android:text="@string/tiene_cuenta">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iniSes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/rose"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/iniciar_sesion">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

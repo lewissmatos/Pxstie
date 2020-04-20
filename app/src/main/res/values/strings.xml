@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">PxT xoxo</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="dialog_fire_missiles" />
+
+    //LOGIN Y REGISTRO
+    <string name="serv_en_des">servicio en desarrollo</string>
+    <string name="email">Email</string>
+    <string name="email_hint">nombre@ejemplo.com</string>
+    <string name="contraseña_hint">Contraseña</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="iniciar_sesion">"Iniciar sesión"</string>
+    <string name="registrarse">Registrate</string>
+    <string name="no_cuenta">¿Aún no tienes una cuenta?</string>
+    <string name="tiene_cuenta">¿Ya tienes una cuenta?</string>
+    <string name="eslogan">Expande tu mente!</string>
+    <string name="agregar_usuario">Agregar usuario</string>
+    <string name="nom_apell">Nombre completo:</string>
+    <string name="re_contraseña">Repetir Contraseña:</string>
+    <string name="nom_apell_hint">Escriba sus datos…</string>
+    <string name="re_contraseña_hint">Repita su Contraseña</string>
+    <string name="cancelar">Cancelar</string>
+
+    //PERFIL STRINGS
+    <string name="desea_cerrar">¿Desea cerrar seisón?</string>
+    <string name="advertencia">¡ADVERTENCIA!</string>
+    <string name="aceptar_sesion">ACEPTAR</string>
+    <string name="cancelar_sesion">CANCELAR</string>
+    <string name="llenar_campos">Debes llenar todos campos</string>
+    <string name="corr_pass_invalido">Correo o contraseña invalido</string>
+    <string name="contr_6_car">La contraseña debe tener al menos 6 carácteres</string>
+    <string name="contr_no_coin">Las contrseñas no coinciden</string>
+    <string name="usuario_agr_corr">Usuario agregado correctamente</string>
+    <string name="corr_exist">Ese correo ya existe</string>
+    <string name="no_reg">No se pudo registrar</string>
+    <string name="no_inic_sesion">No se pudo inciar sesión</string>
+    <string name="no_estab_conex">No se pudo establecer sesión con el servidor</string>
+    //-------------------------------------------------
+    <string name="total_puntos">Total de puntos: </string>
+    <string name="total_partidas">Partidas jugadas: </string>
+    <string name="cantidad_partidas">0000</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="puntuacion">Mi puntuación</string>
+    <string name="apuntes">Apuntes</string>
+    <string name="mis_apuntes">Mis apuntes</string>
+    <string name="lo_aprendi">What i learned:</string>
+    //EXTRAS
+    <string name="temas">Temas</string>
+    <string name="puntuaciones">Puntuaciones</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="buscar">Buscar</string>
+    <string name="toque_boton_iniciar">Toque el botón para iniciar</string>
+    <string name="volver">Volver</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="desliza">Desliza hacia abajo para ver mas</string>
+    <string name="visualiza">Visializa las puntuaciones mas altas</string>
+    <string name="prox">¡PROXIMAMENTE!</string>
+    <string name="nuevo">Nuevo</string>
+
+    //-------------------------------------------
+    <string name="d_salir_s_guar">Desea salir sin guardar</string>
+    <string name="guardado_correctamente">El apunte se ha guardado correctamente</string>
+    <string name="error">Ha ocurrido un error</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

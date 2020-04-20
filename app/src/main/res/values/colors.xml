@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0B7EC5</color>
+    <color name="colorPrimaryDark">#FA1B3C</color>
+    <color name="rose">#FA2E4C</color>
+    <color name="rose_oscuro">#DF0F3A</color>
+    <color name="colorAccent">#0B7EC5</color>
+    <color name="azul">#0B7EC5</color>
+    <color name="azul_oscuro">#075EDA</color>
+    <color name="white_smoke">#F8F8F8</color>
+
+    <color name="verde">#18B530</color>
+    <color name="naranja">#FF521C</color>
+    <color name="purpura">#AD1AC6</color>
+    <color name="rojoreg">#EC1F48</color>
+    <color name="verde_oscuro">#327034</color>
+    <color name="transparent">#CCFAFAFA</color>
+    <color name="trans">#1AFFFFFF</color>
+    <color name="trns">#00FFFFFF</color>
+    //--------------------------------------------
+    <color name="principal_color">#F1F1F1</color>
+    <color name="dark_texts_color">#515151</color>
+    <color name="nocturne">#252525</color>
+    <color name="nocturneclaro">#797987</color>
+    <color name="light_texts_color">#FFFFFF</color>
+    <color name="gray_texts_color">#9E9E9E</color>
+    //--------------------------------------------
+
+    //COLORES DE TEMAS
+    <color name="bio">#FBA53A</color>
+    <color name="univ">#48817C</color>
+    <color name="zoo">#AF7C2F</color>
+    <color name="filo">#637785</color>
+    <color name="fis">#EF4AC6</color>
+    <color name="geo">#69EDA1</color>
+    <color name="comp">#6B837E</color>
+    <color name="quim">#0490D1</color>
+    <color name="mat">#EF1515</color>
+    <color name="his">#FFEA00</color>
+    <color name="lit">#5734A5</color>
+    <color name="mit">#454545</color>
+    //99COLORS (TRANS)
+    <color name="bio99">#99FBA53A</color>
+    <color name="univ99">#B348817C</color>
+    <color name="zoo99">#CCCD9A4F</color>
+    <color name="filo99">#99637785</color>
+    <color name="fis99">#CCEF4AC6</color>
+    <color name="geo99">#CC27C56A</color>
+    <color name="comp99">#99729C98</color>
+    <color name="quim99">#990490D1</color>
+    <color name="mat99">#99EF1515</color>
+    <color name="his99">#CCFFEA00</color>
+    <color name="lit99">#995734A5</color>
+    <color name="mit99">#99454545</color>
+    <color name="anime">#9921597C</color>
+    //COLORES CLAROS PA EL PERFIL
+    <color name="bioclaro">#59FBA53A</color>
+    <color name="univclaro">#665F9E98</color>
+    <color name="zooclaro">#66D8AA65</color>
+    <color name="filoclaro">#66637785</color>
+    <color name="fisclaro">#4D000000</color>
+    <color name="geoclaro">#4D27C56A</color>
+    <color name="compclaro">#4D6B837E</color>
+    <color name="quimclaro">#4D0490D1</color>
+    <color name="matclaro">#4DEF1515</color>
+    <color name="hisclaro">#4DFFEA00</color>
+    <color name="litclaro">#4D5734A5</color>
+    <color name="mitclaro">#4D454545</color>
+    <color name="transparente_puro">#00FFFFFF</color>
+
+    <color name="gold">#FFBB5A</color>
+    <color name="silver">#A8B0DE</color>
+    <color name="bronze">#B3907E</color>
+    <color name="gris_tabla">#6A6A6A</color>
+
+
+</resources>

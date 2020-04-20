@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rose"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_smoke"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lyPrin"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/rose"
+                android:background="@drawable/layout_principal_curvasabajo"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pxstie"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_curverightsuperior"
+            android:gravity="center_horizontal"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="70dp"
+                app:cardElevation="3dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="30dp"
+                >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/encabezado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/iniciar_sesion"
+                    android:textStyle="bold"
+                    android:textColor="@color/gris_tabla"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/edUser"
+                    android:layout_width="260dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:background="@drawable/curves"
+                    android:drawablePadding="6dp"
+                    android:paddingEnd="30dp"
+                    android:drawableLeft="@drawable/profile_icon"
+                    android:hint="Usuario"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:layout_marginTop="18dp"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/edPass"
+                    android:layout_width="260dp"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:background="@drawable/curves"
+                    android:ems="10"
+                    android:drawablePadding="6dp"
+                    android:paddingEnd="30dp"
+                    android:hint="@string/contraseña"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/pass_icon"
+                    android:layout_marginTop="18dp"
+                    android:padding="6dp"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnIniSes"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="@color/rose"
+                    android:background="@drawable/button_rouned"
+                    android:text="@string/iniciar_sesion"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4A4A4A"
+                    android:paddingStart="6dp"
+                    android:textSize="16sp"
+                    android:text="@string/no_cuenta">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/btnReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/azul"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/registrarse">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

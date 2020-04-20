@@ -1,0 +1,19 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/azul</item>
+        <item name="colorPrimaryDark">@color/rose</item>
+        <item name="colorAccent">@color/rose</item>
+
+    </style>
+
+ <style name="DialogBasicCustomDelete" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#BC0210</item>
+ </style>
+
+ <style name="DialogBasicCustomNormal" parent="Theme.AppCompat.Light.Dialog.Alert">
+     <item name="colorAccent">@color/nocturne</item>
+ </style>
+
+</resources>
