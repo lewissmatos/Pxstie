@@ -68,12 +68,11 @@ public class InteresesActivity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.btnAnte:
 
-                busca=edBusca.getText().toString();
                 musica=edMusica.getText().toString();
                 hobbies=edHobbies.getText().toString();
                 creencias=edCreencias.getText().toString();
 
-                if (!busca.isEmpty()||!musica.isEmpty()||!hobbies.isEmpty()||!creencias.isEmpty())
+                if (!musica.isEmpty()||!hobbies.isEmpty()||!creencias.isEmpty())
                 {
                     Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
                 }
@@ -84,7 +83,11 @@ public class InteresesActivity extends AppCompatActivity implements View.OnClick
 
                 break;
             case R.id.btnSig:
-                if (busca.isEmpty()||musica.isEmpty()||hobbies.isEmpty()||creencias.isEmpty())
+
+                musica=edMusica.getText().toString();
+                hobbies=edHobbies.getText().toString();
+                creencias=edCreencias.getText().toString();
+                if (musica.isEmpty()||hobbies.isEmpty()||creencias.isEmpty())
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
