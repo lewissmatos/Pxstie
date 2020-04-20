@@ -21,19 +21,11 @@ public class MensajesFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_mensajes, container, false);
 
 
-        perfil = view.findViewById(R.id.perfil);
-
-        perfil.setOnClickListener(this);
         return view;
-
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.perfil:
-                startActivity(new Intent(getContext(), CuentaActivity.class));
-                break;
-        }
+
     }
 }

@@ -15,40 +15,21 @@
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white_smoke"
+            android:layout_height="60dp"
+            android:background="@color/rose"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <RelativeLayout
-                android:id="@+id/lyPrin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@color/rose"
-                android:gravity="left"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toTopOf="parent"
-                >
-                <ImageView
-                    android:id="@+id/perfil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:srcCompat="@drawable/cuentanew"
-                    />
 
                 <TextView
                     android:id="@+id/txtTitulo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="4dp"
                     android:layout_centerInParent="true"
                     android:text="Inicio"
                     android:textStyle="bold"
                     android:textColor="@color/light_texts_color"
                     android:textSize="34sp" />
-
-            </RelativeLayout>
 
         </LinearLayout>
 

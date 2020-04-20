@@ -21,18 +21,14 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_inicio, container, false);
 
-        perfil = view.findViewById(R.id.perfil);
 
-        perfil.setOnClickListener(this);
         return view;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.perfil:
-                startActivity(new Intent(getContext(), CuentaActivity.class));
-                break;
+
         }
     }
 }

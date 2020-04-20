@@ -19,9 +19,9 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
 
     private ProgressDialog dialog;
     private Button btnSig,btnAnte;
-    private EditText edGenero, edEdad, edOcupacion, edPais, edCiudad;
+    private EditText edGenero, edOcupacion, edPais, edCiudad,edMusica, edHobbies;
     private RadioButton rbMas, rbFem;
-    private String edad, ciudad, ocup, pais;
+    private String edad, ciudad, ocup, pais, hobbies, musica;
     TextView iniSes;
     private Window window;
 
@@ -32,16 +32,15 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_informacion);
 
         iniSes = findViewById(R.id.iniSes);
-        btnSig = findViewById(R.id.btnSig);
-        btnAnte = findViewById(R.id.btnAnte);
         rbMas = findViewById(R.id.rbMas);
         rbFem = findViewById(R.id.rbFem);
 
         edGenero = findViewById(R.id.edGenero);
-        edEdad = findViewById(R.id.edEdad);
         edOcupacion = findViewById(R.id.edOcupacion);
         edPais = findViewById(R.id.edPais);
         edCiudad = findViewById(R.id.edCiudad);
+        edMusica = findViewById(R.id.edMusica);
+        edHobbies = findViewById(R.id.edHobbies);
 
         iniSes.setOnClickListener(this);
         btnSig.setOnClickListener(this);
@@ -60,12 +59,14 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iniSes:
-                edad=edEdad.getText().toString();
+
+                hobbies=edHobbies.getText().toString();
+                musica=edMusica.getText().toString();
                 ocup=edOcupacion.getText().toString();
                 pais=edPais.getText().toString();
                 ciudad=edCiudad.getText().toString();
 
-                if (!edad.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
+                if (!musica.isEmpty()||!hobbies.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
                 {
                     Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
                 }
@@ -75,32 +76,18 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
                 }
                 break;
             case R.id.btnAnte:
-                edad=edEdad.getText().toString();
+                hobbies=edHobbies.getText().toString();
+                musica=edMusica.getText().toString();
                 ocup=edOcupacion.getText().toString();
                 pais=edPais.getText().toString();
                 ciudad=edCiudad.getText().toString();
 
-                if (!edad.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
+                if (!musica.isEmpty()||!hobbies.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
                 {
                     Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     startActivity(new Intent(this, DatosActivity.class));
-                    finish();
-                }
-                break;
-            case R.id.btnSig:
-                edad=edEdad.getText().toString();
-                ocup=edOcupacion.getText().toString();
-                pais=edPais.getText().toString();
-                ciudad=edCiudad.getText().toString();
-
-                if (edad.isEmpty()||ocup.isEmpty()||pais.isEmpty()||ciudad.isEmpty())
-                {
-                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    startActivity(new Intent(this, InteresesActivity.class));
                     finish();
                 }
                 break;

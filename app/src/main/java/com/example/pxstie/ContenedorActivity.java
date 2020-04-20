@@ -37,13 +37,16 @@ public class ContenedorActivity extends AppCompatActivity {
                             case R.id.mensajes:
                                 selectedFragment = new MensajesFragment();
                                 break;
+                            case R.id.cuenta:
+                                selectedFragment = new CuentaFragment();
+                                break;
                             case R.id.notificaciones:
                                 selectedFragment = new NotificacionesFragment();
                                 break;
-                    /*      case R.id.buscar:
-                                selectedFragment = new BuscarFragment();
+                            case R.id.opciones:
+                            //    selectedFragment = new OpcionesFragment();
                                 break;
-                                            */
+
                         }
 
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

@@ -77,7 +77,7 @@ public class SocialActivity extends AppCompatActivity implements View.OnClickLis
                     Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    startActivity(new Intent(this, InteresesActivity.class));
+                   // startActivity(new Intent(this, InteresesActivity.class));
                     finish();
                 }
                 break;

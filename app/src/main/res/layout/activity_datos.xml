@@ -53,23 +53,10 @@
             android:gravity="center_horizontal"
             >
 
-            <TextView
-                android:layout_marginTop="30dp"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:text="1"
-                android:textColor="#fff"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:backgroundTint="@color/azul"
-                android:background="@drawable/btn_circulo"
-                >
-            </TextView>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
-                android:layout_height="380dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="420dp"
+                android:layout_marginTop="40dp"
                 app:cardElevation="3dp"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp"
@@ -150,39 +137,30 @@
                         android:layout_marginTop="18dp"
                         android:textSize="15sp" />
 
-                    <LinearLayout
+                    <EditText
+                        android:id="@+id/edEdad"
                         android:layout_width="260dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="16dp"
-                        >
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@drawable/curves"
+                        android:hint="Edad"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/calendario"
+                        android:layout_marginTop="18dp"
+                        android:textSize="14sp" />
 
                         <Button
-                            android:id="@+id/btnAnte"
-                            android:layout_width="120dp"
-                            android:layout_height="44dp"
-                            android:background="@drawable/button_rouned"
-                            android:backgroundTint="#E8E8E8"
-                            android:text="Anterior"
-                            android:paddingEnd="10dp"
-                            android:drawableLeft="@drawable/anterior"
-                            android:textColor="#fff"
-                            android:textSize="16sp" />
-
-                        <Button
-                            android:id="@+id/btnSig"
-                            android:layout_width="120dp"
+                            android:id="@+id/btnReg"
+                            android:layout_width="260dp"
                             android:layout_height="44dp"
                             android:background="@drawable/button_rouned"
                             android:backgroundTint="@color/azul"
-                            android:text="Siguiente"
-                            android:paddingStart="10dp"
-                            android:layout_marginStart="20dp"
-                            android:drawableRight="@drawable/siguiente"
+                            android:text="Registrarse"
+                            android:layout_marginTop="20dp"
                             android:textColor="#fff"
                             android:textSize="16sp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 

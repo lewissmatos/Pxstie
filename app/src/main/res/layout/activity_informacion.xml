@@ -67,7 +67,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
-                android:layout_height="450dp"
+                android:layout_height="440dp"
                 android:layout_marginTop="10dp"
                 app:cardElevation="3dp"
                 android:layout_gravity="center"
@@ -89,7 +89,6 @@
                         android:textStyle="bold"
                         android:textColor="@color/gris_tabla"
                         android:textSize="24sp" />
-
                     <TextView
                         android:layout_width="260dp"
                         android:layout_height="wrap_content"
@@ -143,19 +142,7 @@
                         android:textSize="15dp" />
                 </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/edEdad"
-                        android:layout_width="260dp"
-                        android:layout_height="44dp"
-                        android:gravity="center"
-                        android:inputType="number"
-                        android:background="@drawable/curves"
-                        android:hint="Edad"
-                        android:padding="8dp"
-                        android:paddingEnd="30dp"
-                        android:drawableLeft="@drawable/calendario"
-                        android:layout_marginTop="18dp"
-                        android:textSize="14sp" />
+
 
                     <EditText
                         android:id="@+id/edOcupacion"
@@ -202,70 +189,36 @@
                         android:drawableLeft="@drawable/pais"
                         android:textSize="15sp" />
 
-                    <LinearLayout
+                    <EditText
+                        android:id="@+id/edMusica"
                         android:layout_width="260dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="16dp"
-                        >
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:background="@drawable/curves"
+                        android:hint="Géneros musicales"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/musica"                        android:layout_marginTop="18dp"
+                        android:textSize="15dp" />
 
-                        <Button
-                            android:id="@+id/btnAnte"
-                            android:layout_width="120dp"
-                            android:layout_height="44dp"
-                            android:background="@drawable/button_rouned"
-                            android:backgroundTint="@color/azul"
-                            android:text="Anterior"
-                            android:paddingEnd="10dp"
-                            android:drawableLeft="@drawable/anterior"
-                            android:textColor="#fff"
-                            android:textSize="16sp" />
-
-                        <Button
-                            android:id="@+id/btnSig"
-                            android:layout_width="120dp"
-                            android:layout_height="44dp"
-                            android:background="@drawable/button_rouned"
-                            android:backgroundTint="@color/verde"
-                            android:text="Siguiente"
-                            android:paddingStart="10dp"
-                            android:layout_marginStart="20dp"
-                            android:drawableRight="@drawable/siguiente"
-                            android:textColor="#fff"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/edHobbies"
+                        android:layout_width="260dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:background="@drawable/curves"
+                        android:hint="Hobbies"
+                        android:padding="8dp"
+                        android:paddingEnd="30dp"
+                        android:drawableLeft="@drawable/topics_2"                        android:layout_marginTop="18dp"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="278dp"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#4A4A4A"
-                    android:paddingStart="6dp"
-                    android:textSize="16sp"
-                    android:text="@string/tiene_cuenta">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/iniSes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/rose"
-                    android:paddingStart="10dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:text="@string/iniciar_sesion">
-                </TextView>
-            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
