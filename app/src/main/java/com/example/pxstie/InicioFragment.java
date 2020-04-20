@@ -32,6 +32,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.perfil:
                 startActivity(new Intent(getContext(), CuentaActivity.class));
+                break;
         }
     }
 }

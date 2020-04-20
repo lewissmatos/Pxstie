@@ -35,6 +35,7 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.txtMasInfo:
                 startActivity(new Intent(this, MasInfoActivity.class));
                 finish();
+                break;
         }
     }
 }

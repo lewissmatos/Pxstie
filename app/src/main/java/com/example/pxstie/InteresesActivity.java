@@ -11,6 +11,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class InteresesActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -18,7 +19,7 @@ public class InteresesActivity extends AppCompatActivity implements View.OnClick
     private ProgressDialog dialog;
     private Button btnSig,btnAnte;
     private EditText edBusca, edMusica, edHobbies, edCreencias;
-    private String us, pass, nom, rpass;
+    private String busca, musica, hobbies, creencias;
     TextView iniSes;
     private Window window;
 
@@ -51,16 +52,47 @@ public class InteresesActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iniSes:
+                busca=edBusca.getText().toString();
+                musica=edMusica.getText().toString();
+                hobbies=edHobbies.getText().toString();
+                creencias=edCreencias.getText().toString();
+
+                if (!busca.isEmpty()||!musica.isEmpty()||!hobbies.isEmpty()||!creencias.isEmpty())
+                {
+                    Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
+                }
+                else {
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
+                }
                 break;
             case R.id.btnAnte:
-                startActivity(new Intent(this, InformacionActivity.class));
-                finish();
+
+                busca=edBusca.getText().toString();
+                musica=edMusica.getText().toString();
+                hobbies=edHobbies.getText().toString();
+                creencias=edCreencias.getText().toString();
+
+                if (!busca.isEmpty()||!musica.isEmpty()||!hobbies.isEmpty()||!creencias.isEmpty())
+                {
+                    Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(this, InformacionActivity.class));
+                    finish();
+                }
+
                 break;
             case R.id.btnSig:
-                startActivity(new Intent(this, SocialActivity.class));
-                finish();
+                if (busca.isEmpty()||musica.isEmpty()||hobbies.isEmpty()||creencias.isEmpty())
+                {
+                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(this, SocialActivity.class));
+                    finish();
+                }
+                break;
         }
     }
 }

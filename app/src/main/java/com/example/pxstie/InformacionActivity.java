@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class InformacionActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -20,7 +21,7 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
     private Button btnSig,btnAnte;
     private EditText edGenero, edEdad, edOcupacion, edPais, edCiudad;
     private RadioButton rbMas, rbFem;
-    private String us, pass, nom, rpass;
+    private String edad, ciudad, ocup, pais;
     TextView iniSes;
     private Window window;
 
@@ -59,16 +60,49 @@ public class InformacionActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iniSes:
-                startActivity(new Intent(this, MainActivity.class));
-                finish();
+                edad=edEdad.getText().toString();
+                ocup=edOcupacion.getText().toString();
+                pais=edPais.getText().toString();
+                ciudad=edCiudad.getText().toString();
+
+                if (!edad.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
+                {
+                    Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(this, MainActivity.class));
+                    finish();
+                }
                 break;
             case R.id.btnAnte:
-                startActivity(new Intent(this, DatosActivity.class));
-                finish();
+                edad=edEdad.getText().toString();
+                ocup=edOcupacion.getText().toString();
+                pais=edPais.getText().toString();
+                ciudad=edCiudad.getText().toString();
+
+                if (!edad.isEmpty()||!ocup.isEmpty()||!pais.isEmpty()||!ciudad.isEmpty())
+                {
+                    Toast.makeText(this, "Seguro que desesa retroceder?", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(this, DatosActivity.class));
+                    finish();
+                }
                 break;
             case R.id.btnSig:
-                startActivity(new Intent(this, InteresesActivity.class));
-                finish();
+                edad=edEdad.getText().toString();
+                ocup=edOcupacion.getText().toString();
+                pais=edPais.getText().toString();
+                ciudad=edCiudad.getText().toString();
+
+                if (edad.isEmpty()||ocup.isEmpty()||pais.isEmpty()||ciudad.isEmpty())
+                {
+                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(this, InteresesActivity.class));
+                    finish();
+                }
                 break;
         }
     }

@@ -22,9 +22,11 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btnVolver:
-                startActivity(new Intent (this, CuentaActivity.class));
+                startActivity(new Intent(this, CuentaActivity.class));
+                finish();
+                break;
         }
     }
 }

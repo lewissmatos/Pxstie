@@ -33,6 +33,7 @@ public class NotificacionesFragment extends Fragment implements View.OnClickList
             switch (v.getId()){
                 case R.id.perfil:
                     startActivity(new Intent(getContext(), CuentaActivity.class));
+                    break;
             }
     }
 }
