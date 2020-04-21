@@ -23,8 +23,7 @@
                 android:id="@+id/lyPrin"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:backgroundTint="@color/rose"
-                android:background="@drawable/layout_principal_curvasabajo"
+                android:background="@color/rose"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <TextView

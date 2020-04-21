@@ -27,8 +27,7 @@
                 android:id="@+id/lyPrin"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:backgroundTint="@color/azul"
-                android:background="@drawable/layout_principal_curvasabajo"
+                android:background="@color/azul"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <TextView
@@ -135,11 +134,11 @@
                         android:paddingEnd="30dp"
                         android:drawableLeft="@drawable/key"
                         android:layout_marginTop="18dp"
-                        android:textSize="15sp" />
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="260dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_marginTop="18dp"
                         >
 
@@ -150,6 +149,7 @@
                         android:gravity="center"
                         android:background="@drawable/button_secuntary"
                         android:text="Edad"
+                        android:layout_marginTop="4dp"
                         android:padding="8dp"
                         android:textColor="@color/azul"
                         android:drawableLeft="@drawable/abajo"
@@ -163,6 +163,7 @@
                             android:layout_marginStart="20dp"
                             android:background="@drawable/button_secuntary"
                             android:text="Género"
+                            android:layout_marginTop="4dp"
                             android:padding="8dp"
                             android:textColor="@color/azul"
                             android:drawableRight="@drawable/abajo"
