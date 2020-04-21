@@ -19,9 +19,9 @@ import java.util.prefs.Preferences;
 
 public class DatosActivity extends AppCompatActivity implements View.OnClickListener{
     private ProgressDialog dialog;
-    private Button btnReg,edEdad;
+    private Button btnReg,btnEdad, btnGenero;
     private EditText edUser, edPass, edRPass, edNom;
-    private String user, password, nombre, rpassword, edad;
+    private String user, password, nombre, rpassword;
     TextView iniSes;
     private Window window;
     AlertDialog.Builder opdialog;
@@ -39,10 +39,13 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         edPass = findViewById(R.id.edPass);
         edNom = findViewById(R.id.edNom);
         edRPass = findViewById(R.id.edRPass);
-        edEdad = findViewById(R.id.edEdad);
+        btnEdad = findViewById(R.id.btnEdad);
+        btnGenero = findViewById(R.id.btnGenero);
 
         iniSes.setOnClickListener(this);
         btnReg.setOnClickListener(this);
+        btnGenero.setOnClickListener(this);
+        btnEdad.setOnClickListener(this);
 
         String colorbarra = "#0B7EC5";
 
