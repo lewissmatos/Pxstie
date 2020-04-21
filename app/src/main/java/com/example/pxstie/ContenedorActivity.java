@@ -43,9 +43,9 @@ public class ContenedorActivity extends AppCompatActivity {
                         case R.id.notificaciones:
                             selectedFragment = new NotificacionesFragment();
                             break;
-                           /* case R.id.opciones:
-                                selectedFragment = new OpcionesFragment();
-                                break;*/
+                        case R.id.buscar:
+                                selectedFragment = new BuscarFragment();
+                                break;
                     }
                     if (menuItem.getItemId() != R.id.cuenta){
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

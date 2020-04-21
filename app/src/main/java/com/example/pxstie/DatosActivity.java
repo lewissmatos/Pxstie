@@ -105,6 +105,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty())
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 }
                 else {
                     Usuario.Registrar(this, dialog, nombre, user, password, "M", "2020-04-10");

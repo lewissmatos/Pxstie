@@ -26,7 +26,7 @@
     <item
         android:id="@+id/buscar"
         android:icon="@drawable/search"
-        android:title="Opciones">
+        android:title="Buscar">
     </item>
 
 
