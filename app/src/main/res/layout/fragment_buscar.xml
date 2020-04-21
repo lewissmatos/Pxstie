@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OpcionesFragment">
+    tools:context=".BuscarFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="10dp"
-                android:text="Opciones"
+                android:text="Buscar"
                 android:textStyle="bold"
                 android:textColor="@color/light_texts_color"
                 android:textSize="34sp" />
@@ -42,5 +42,4 @@
 
         </LinearLayout>
     </LinearLayout>
-
 </FrameLayout>

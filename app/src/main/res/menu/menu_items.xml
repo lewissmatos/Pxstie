@@ -12,7 +12,11 @@
         android:icon="@drawable/mensajes"
         android:title="Mensajes">
     </item>
-
+    <item
+        android:id="@+id/cuenta"
+        android:icon="@drawable/cuentanew"
+        android:title="Cuenta">
+    </item>
     <item
         android:id="@+id/notificaciones"
         android:icon="@drawable/notificationes"
@@ -20,16 +24,12 @@
     </item>
 
     <item
-        android:id="@+id/opciones"
-        android:icon="@drawable/opciones"
+        android:id="@+id/buscar"
+        android:icon="@drawable/search"
         android:title="Opciones">
     </item>
 
-    <item
-        android:id="@+id/cuenta"
-        android:icon="@drawable/cuentanew"
-        android:title="Cuenta">
-    </item>
+
 
 
 </menu>
