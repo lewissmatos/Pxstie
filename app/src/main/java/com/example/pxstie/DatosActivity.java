@@ -102,6 +102,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnReg:
+                dialog = new ProgressDialog(this, R.style.DialogBasicCustomAzul);
                 dialog.setMessage("Registrando...");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
@@ -117,9 +118,21 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty()||edad.equalsIgnoreCase("edad")||genero.equalsIgnoreCase("genero"))
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 }
                 else {
-                    Usuario.Registrar(this, dialog, nombre, user, password, genero, edad);
+                    if (!password.equals(rpassword)){
+                        Toast.makeText(this, R.string.contr_no_coin, Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                    else {
+                        if (password.length() <= 6){
+                            Toast.makeText(this, R.string.contr_6_car, Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
+                        else
+                            Usuario.Registrar(this, dialog, nombre, user, password, genero, edad);
+                    }
                 }
                 break;
             case R.id.btnEdad:
