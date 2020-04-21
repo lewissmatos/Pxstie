@@ -24,7 +24,7 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnVolver:
-                startActivity(new Intent(this, CuentaActivity.class));
+                startActivity(new Intent(this, CuentaFragment.class));
                 finish();
                 break;
         }
