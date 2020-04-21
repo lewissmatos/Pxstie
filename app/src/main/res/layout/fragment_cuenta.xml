@@ -41,7 +41,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="330dp"
-                android:layout_height="200dp"
+                android:layout_height="170dp"
                 android:layout_marginTop="10dp"
                 app:cardElevation="3dp"
                 android:layout_gravity="center"
@@ -55,14 +55,6 @@
                     android:gravity="center"
                     app:layout_constraintTop_toTopOf="parent"
                     >
-                    <TextView
-                        android:id="@+id/encabezado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Datos personales"
-                        android:textStyle="bold"
-                        android:textColor="@color/gris_tabla"
-                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/txtNom"
@@ -97,7 +89,7 @@
                         android:id="@+id/txtMasInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ver más información"
+                        android:text="Más información"
                         android:textStyle="bold"
                         android:layout_marginTop="12dp"
                         android:textColor="@color/azul"
