@@ -153,7 +153,7 @@
                         android:padding="8dp"
                         android:textColor="@color/azul"
                         android:drawableLeft="@drawable/abajo"
-                        android:textSize="14sp" />
+                        android:textSize="16sp" />
 
                         <Button
                             android:id="@+id/btnGenero"
