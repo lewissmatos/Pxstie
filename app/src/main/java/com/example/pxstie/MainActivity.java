@@ -18,11 +18,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView btnReg;
     private String user, password;
     private ProgressDialog dialog;
+    private Usuario userr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        userr = Preferences.getUserData(this);
+        if (!userr.getCorreo().equalsIgnoreCase(" ")){
+            startActivity(new Intent(this, ContenedorActivity.class));
+            finish();
+        }
 
         btnReg = findViewById(R.id.btnReg);
         btnIniSes = findViewById(R.id.btnIniSes);
