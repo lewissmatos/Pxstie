@@ -54,8 +54,8 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
-                android:layout_height="420dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="460dp"
+                android:layout_marginTop="20dp"
                 app:cardElevation="3dp"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp"
@@ -103,7 +103,7 @@
                         android:maxLength="24"
                         android:paddingEnd="30dp"
                         android:drawableLeft="@drawable/usuarioicon"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="14dp"
                         android:textSize="15sp" />
 
                     <EditText
@@ -117,7 +117,7 @@
                         android:inputType="textPassword"
                         android:paddingEnd="30dp"
                         android:drawableLeft="@drawable/passicon"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="14dp"
                         android:padding="8dp"
                         android:textSize="15sp" />
 
@@ -133,40 +133,51 @@
                         android:padding="8dp"
                         android:paddingEnd="30dp"
                         android:drawableLeft="@drawable/key"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="14dp"
                         android:textSize="16sp" />
-
-                    <LinearLayout
-                        android:layout_width="260dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="18dp"
-                        >
 
                     <Button
                         android:id="@+id/btnEdad"
-                        android:layout_width="120dp"
+                        android:layout_width="260dp"
                         android:layout_height="44dp"
                         android:gravity="center"
                         android:background="@drawable/button_secuntary"
-                        android:text="Edad"
-                        android:layout_marginTop="4dp"
+                        android:text="Fecha de nacimiento"
+                        android:layout_marginTop="14dp"
                         android:padding="8dp"
                         android:textColor="@color/azul"
                         android:drawableLeft="@drawable/abajo"
                         android:textSize="16sp" />
 
+                    <LinearLayout
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content">
                         <Spinner
                             android:id="@+id/spGenero"
-                            android:layout_width="120dp"
+                            android:layout_width="110dp"
                             android:layout_height="44dp"
                             android:gravity="center"
-                            android:layout_marginStart="20dp"
-                            android:background="@drawable/button_secuntary"
-                            android:layout_marginTop="4dp"
+                            android:background="@drawable/button_genero"
+                            android:layout_marginTop="14dp"
                             android:padding="8dp"
-                            android:textColor="@color/azul"
                             android:drawableRight="@drawable/abajo"
-                            android:textSize="14sp" />
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edGenero"
+                            android:layout_width="140dp"
+                            android:layout_height="44dp"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="@drawable/curves"
+                            android:hint="Especificar"
+                            android:visibility="invisible"
+                            android:padding="8dp"
+                            android:layout_marginStart="10dp"
+                            android:maxLength="24"
+                            android:layout_marginTop="14dp"
+                            android:textSize="15sp" />
+
                     </LinearLayout>
 
                     <Button
@@ -176,7 +187,7 @@
                             android:background="@drawable/button_rouned"
                             android:backgroundTint="@color/azul"
                             android:text="Registrarse"
-                            android:layout_marginTop="18dp"
+                            android:layout_marginTop="16dp"
                             android:textColor="#fff"
                             android:textSize="16sp" />
 

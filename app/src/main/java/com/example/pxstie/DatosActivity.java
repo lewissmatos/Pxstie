@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -26,18 +27,20 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
     private ProgressDialog dialog;
     private Button btnReg,btnEdad;
     private Spinner spGenero;
-    private EditText edUser, edPass, edRPass, edNom;
+    private EditText edUser, edPass, edRPass, edNom, edGenero;
     private String user, password, nombre, rpassword, edad, genero;
     TextView iniSes;
     private Window window;
     AlertDialog.Builder opdialog;
-    private String[] generos = new String[]{"GENERO", "Masculino", "Femenino"};
+    private String[] generos = new String[]{"GÉNERO", "Masculino", "Femenino", "Especificar"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
+
+
 
         iniSes = findViewById(R.id.iniSes);
         btnReg = findViewById(R.id.btnReg);
@@ -48,6 +51,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         edRPass = findViewById(R.id.edRPass);
         btnEdad = findViewById(R.id.btnEdad);
         spGenero = findViewById(R.id.spGenero);
+        edGenero = findViewById(R.id.edGenero);
 
         iniSes.setOnClickListener(this);
         btnReg.setOnClickListener(this);
@@ -55,6 +59,23 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         btnEdad.setOnClickListener(this);
 
         spGenero.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, generos));
+
+        spGenero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String item = parent.getSelectedItem().toString();
+                if (item.equalsIgnoreCase("especificar")){
+                    edGenero.setVisibility(View.VISIBLE);
+                }
+                else
+                    edGenero.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         String colorbarra = "#0B7EC5";
 
@@ -112,8 +133,13 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
                 edad = btnEdad.getText().toString();
-                genero = spGenero.getSelectedItem().toString();
-
+                if(spGenero.getSelectedItem().toString().equalsIgnoreCase("especificar"))
+                {
+                    genero = edGenero.getText().toString();
+                }
+                else {
+                    genero = spGenero.getSelectedItem().toString();
+                }
 
                 if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty()||edad.equalsIgnoreCase("edad")||genero.equalsIgnoreCase("genero"))
                 {
