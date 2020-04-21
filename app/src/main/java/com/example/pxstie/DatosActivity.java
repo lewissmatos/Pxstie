@@ -102,7 +102,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 else {
                     Usuario.Registrar(this, dialog, nombre, user, password, "M", "2020-04-10");
-                    finish();
                 }
                 break;
         }
