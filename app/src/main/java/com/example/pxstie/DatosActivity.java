@@ -19,8 +19,8 @@ import java.util.prefs.Preferences;
 
 public class DatosActivity extends AppCompatActivity implements View.OnClickListener{
     private ProgressDialog dialog;
-    private Button btnReg;
-    private EditText edUser, edPass, edRPass, edNom, edEdad;
+    private Button btnReg,edEdad;
+    private EditText edUser, edPass, edRPass, edNom;
     private String user, password, nombre, rpassword, edad;
     TextView iniSes;
     private Window window;
@@ -55,13 +55,12 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iniSes:
-                edad=edEdad.getText().toString();
                 user=edUser.getText().toString();
                 password=edPass.getText().toString();
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
 
-                if (!user.isEmpty()||!password.isEmpty()||!nombre.isEmpty()||!rpassword.isEmpty()||!edad.isEmpty())
+                if (!user.isEmpty()||!password.isEmpty()||!nombre.isEmpty()||!rpassword.isEmpty())
                 {
                     opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomNormal);
                     opdialog.setMessage("Seguro que desea retroceder?")
@@ -88,13 +87,12 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnReg:
-                edad=edEdad.getText().toString();
                 user=edUser.getText().toString();
                 password=edPass.getText().toString();
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
 
-                if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty()||edad.isEmpty())
+                if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty())
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
