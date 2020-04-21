@@ -65,6 +65,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
 
+
                 if (!user.isEmpty()||!password.isEmpty()||!nombre.isEmpty()||!rpassword.isEmpty())
                 {
                     opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
