@@ -3,6 +3,7 @@ package com.example.pxstie;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,21 +11,27 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.prefs.Preferences;
 
 public class DatosActivity extends AppCompatActivity implements View.OnClickListener{
     private ProgressDialog dialog;
-    private Button btnReg,btnEdad, btnGenero;
+    private Button btnReg,btnEdad;
+    private Spinner spGenero;
     private EditText edUser, edPass, edRPass, edNom;
-    private String user, password, nombre, rpassword;
+    private String user, password, nombre, rpassword, edad, genero;
     TextView iniSes;
     private Window window;
     AlertDialog.Builder opdialog;
+    private String[] generos = new String[]{"GENERO", "Masculino", "Femenino"};
 
 
     @Override
@@ -40,12 +47,14 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         edNom = findViewById(R.id.edNom);
         edRPass = findViewById(R.id.edRPass);
         btnEdad = findViewById(R.id.btnEdad);
-        btnGenero = findViewById(R.id.btnGenero);
+        spGenero = findViewById(R.id.spGenero);
 
         iniSes.setOnClickListener(this);
         btnReg.setOnClickListener(this);
-        btnGenero.setOnClickListener(this);
+        //btnGenero.setOnClickListener(this);
         btnEdad.setOnClickListener(this);
+
+        spGenero.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, generos));
 
         String colorbarra = "#0B7EC5";
 
@@ -93,7 +102,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnReg:
-                dialog = new ProgressDialog(this, R.style.DialogBasicCustomAzul);
                 dialog.setMessage("Registrando...");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
@@ -102,28 +110,39 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 password=edPass.getText().toString();
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
+                edad = btnEdad.getText().toString();
+                genero = spGenero.getSelectedItem().toString();
 
-                if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty())
+
+                if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty()||edad.equalsIgnoreCase("edad")||genero.equalsIgnoreCase("genero"))
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
-                    dialog.dismiss();
                 }
                 else {
-                    if (!password.equals(rpassword)) {
-                        Toast.makeText(this, R.string.contr_no_coin, Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
-                    }
-                    else {
-                        if (password.length() <= 6){
-                            Toast.makeText(this, R.string.contr_6_car, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
-                        else
-                            Usuario.Registrar(this, dialog, nombre, user, password, "M", "2020-04-10");
-                    }
+                    Usuario.Registrar(this, dialog, nombre, user, password, genero, edad);
                 }
-
+                break;
+            case R.id.btnEdad:
+                getDate();
                 break;
         }
+    }
+
+    private void getDate(){
+        final Calendar c = Calendar.getInstance();
+        int dia = c.get(Calendar.DAY_OF_MONTH);
+        int mes = c.get(Calendar.MONTH);
+        int ano = c.get(Calendar.YEAR);
+
+        DatePickerDialog datepicker = new DatePickerDialog(DatosActivity.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                btnEdad.setText(year + "-" + (month + 1) + "-" + dayOfMonth);
+            }
+        } , 2000, 12, 12);
+        //datepicker.getDatePicker().setMinDate(System.currentTimeMillis());
+        //c.set(1995, 01, 01);
+        //datepicker.getDatePicker().setMaxDate(System.currentTimeMillis());
+        datepicker.show();
     }
 }
