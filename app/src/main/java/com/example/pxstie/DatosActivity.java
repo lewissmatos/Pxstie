@@ -95,12 +95,13 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
 
+
                 if (user.isEmpty()||password.isEmpty()||nombre.isEmpty()||rpassword.isEmpty())
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    startActivity(new Intent(this, ContenedorActivity.class));
+                    Usuario.Registrar(this, dialog, nombre, user, password, "M", "2020-04-10");
                     finish();
                 }
                 break;
