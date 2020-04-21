@@ -52,6 +52,8 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
         this.window = getWindow();
         //barcolor
         window.setStatusBarColor(Color.parseColor(colorbarra));
+
+        dialog = new ProgressDialog(this);
     }
 
     @Override
@@ -90,6 +92,10 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnReg:
+                dialog.setMessage("Registrando...");
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
+
                 user=edUser.getText().toString();
                 password=edPass.getText().toString();
                 nombre=edNom.getText().toString();

@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnIniSes:
                 dialog.setMessage("Iniciando Sesión...");
                 dialog.setCanceledOnTouchOutside(false);
-                //dialog.show();
-
+                dialog.show();
                 user=edUser.getText().toString();
                 password=edPass.getText().toString();
 

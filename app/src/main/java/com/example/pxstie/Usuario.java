@@ -22,7 +22,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.android.volley.VolleyLog.TAG;
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class Usuario {
 
@@ -101,19 +101,19 @@ public class Usuario {
             public void onResponse(String response) {
                 if (response.isEmpty()) {
                     Toast.makeText(context, "Se ha registrado correctamente", Toast.LENGTH_SHORT).show();
-                    //dialog.dismiss();
-                    //context.startActivity(new Intent(context, MainActivity.class));
+                    dialog.dismiss();
+                    context.startActivity(new Intent(context, MainActivity.class));
                 }
                 else{
                     Toast.makeText(context, response,  Toast.LENGTH_LONG).show();
-                    //dialog.dismiss();
+                    dialog.dismiss();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
-                Log.i(TAG, "onErrorResponse: " + error.toString());
+                dialog.dismiss();
             }
         }){
             @Override
