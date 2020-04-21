@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.btnIniSes:
+                dialog = new ProgressDialog(this, R.style.DialogBasicCustomRose);
                 dialog.setMessage("Iniciando Sesión...");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
