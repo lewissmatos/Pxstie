@@ -83,7 +83,7 @@ public class Usuario {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Ha ocurrido un ERROR", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
