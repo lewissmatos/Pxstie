@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MasInfoActivity"></activity>
+        <activity android:name=".CuentaActivity" />
         <activity android:name=".ContenedorActivity" />
         <activity android:name=".SocialActivity" />
         <activity android:name=".InformacionActivity" />

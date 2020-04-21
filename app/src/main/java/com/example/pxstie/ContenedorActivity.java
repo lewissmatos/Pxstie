@@ -28,28 +28,29 @@ public class ContenedorActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment selectedFragment = null;
-
-                        switch (menuItem.getItemId()){
-                            case R.id.inicio:
-                                selectedFragment = new InicioFragment();
-                                break;
-                            case R.id.mensajes:
-                                selectedFragment = new MensajesFragment();
-                                break;
-                            case R.id.cuenta:
-                                selectedFragment = new CuentaFragment();
-                                break;
-                            case R.id.notificaciones:
-                                selectedFragment = new NotificacionesFragment();
-                                break;
-                            case R.id.opciones:
+                    if (menuItem.getItemId() == R.id.cuenta)
+                    {
+                        startActivity(new Intent(ContenedorActivity.this, CuentaActivity.class));
+                    }
+                    else
+                    switch (menuItem.getItemId()) {
+                        case R.id.inicio:
+                            selectedFragment = new InicioFragment();
+                            break;
+                        case R.id.mensajes:
+                            selectedFragment = new MensajesFragment();
+                            break;
+                        case R.id.notificaciones:
+                            selectedFragment = new NotificacionesFragment();
+                            break;
+                           /* case R.id.opciones:
                                 selectedFragment = new OpcionesFragment();
-                                break;
-                        }
-
+                                break;*/
+                    }
+                    if (menuItem.getItemId() != R.id.cuenta){
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 selectedFragment).commit();
-
+                     }
                     return true;
                 }
             };

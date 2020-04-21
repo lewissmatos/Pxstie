@@ -14,12 +14,6 @@
     </item>
 
     <item
-        android:id="@+id/cuenta"
-        android:icon="@drawable/cuentanew"
-        android:title="Cuenta">
-    </item>
-
-    <item
         android:id="@+id/notificaciones"
         android:icon="@drawable/notificationes"
         android:title="Notificaciones">
@@ -31,6 +25,11 @@
         android:title="Opciones">
     </item>
 
+    <item
+        android:id="@+id/cuenta"
+        android:icon="@drawable/cuentanew"
+        android:title="Cuenta">
+    </item>
 
 
 </menu>
