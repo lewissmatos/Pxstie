@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnReg.setOnClickListener(this);
         btnIniSes.setOnClickListener(this);
+
+        dialog = new ProgressDialog(this);
     }
 
     @Override
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.btnIniSes:
+                dialog.setMessage("Iniciando Sesión...");
+                dialog.setCanceledOnTouchOutside(false);
+                //dialog.show();
 
                 user=edUser.getText().toString();
                 password=edPass.getText().toString();
@@ -49,10 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (user.isEmpty()||password.isEmpty())
                 {
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 }
                 else {
-                startActivity(new Intent(this, ContenedorActivity.class));
-                finish();
+                    Usuario.IniciarSesion(this, dialog, user, password);
+                    finish();
                 }
                 break;
         }
