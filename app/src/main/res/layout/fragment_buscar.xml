@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,19 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/rose"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:gravity="right"
+            android:paddingEnd="40dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txtTitulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginStart="10dp"
-                android:text="Buscar"
-                android:textStyle="bold"
-                android:textColor="@color/light_texts_color"
-                android:textSize="34sp" />
+            <SearchView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:searchIcon="@drawable/search_grande"
+                >
+            </SearchView>
 
         </LinearLayout>
         <LinearLayout
