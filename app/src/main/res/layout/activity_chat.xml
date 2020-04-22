@@ -50,18 +50,20 @@
                 android:layout_alignParentBottom="true">
                 <EditText
                     android:id="@+id/edEscribir"
-                    android:layout_width="320dp"
+                    android:layout_width="340dp"
                     android:layout_height="40dp"
                     android:inputType="text"
-                    android:padding="10dp"
-                    android:textSize="12dp"
+                    android:padding="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18dp"
                     android:background="@drawable/curves"
                     >
                 </EditText>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
                     app:srcCompat="@drawable/enviar"
                     android:layout_marginStart="10dp"
                     android:layout_toRightOf="@id/edEscribir">
