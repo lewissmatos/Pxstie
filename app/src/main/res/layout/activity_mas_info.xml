@@ -61,12 +61,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:padding="20dp"
                 android:orientation="vertical">
                 <androidx.cardview.widget.CardView
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="10dp"
                     app:cardElevation="3dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="30dp"
@@ -165,6 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     app:cardElevation="3dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="30dp"
                     >
