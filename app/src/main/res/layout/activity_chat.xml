@@ -19,14 +19,24 @@
         android:layout_height="50dp"
         android:background="@color/rose"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/anterior" />
 
         <TextView
             android:id="@+id/txtTitulo"
-            android:layout_width="wrap_content"
+            android:layout_width="364dp"
+            android:paddingEnd="30dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Chats"
+            android:text="Chat"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/white_smoke"
             android:textSize="34sp" />
@@ -46,16 +56,19 @@
                 android:background="#fff"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:padding="6dp"
+                android:padding="8dp"
                 android:layout_alignParentBottom="true">
                 <EditText
                     android:id="@+id/edEscribir"
                     android:layout_width="340dp"
                     android:layout_height="40dp"
                     android:inputType="text"
-                    android:padding="20dp"
+                    android:padding="6dp"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textColor="#000"
                     android:layout_marginStart="10dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="@drawable/curves"
                     >
                 </EditText>

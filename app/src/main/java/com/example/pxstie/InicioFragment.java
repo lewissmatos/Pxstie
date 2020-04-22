@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class InicioFragment extends Fragment implements View.OnClickListener {
 
-    ImageView perfil;
+    ImageView btnMensajes;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -21,14 +21,16 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_inicio, container, false);
 
-
+        btnMensajes = view.findViewById(R.id.btnMensajes);
+        btnMensajes.setOnClickListener(this);
         return view;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-
+            case R.id.btnMensajes:
+                startActivity(new Intent(getContext(), MensajesActivity.class));
         }
     }
 }

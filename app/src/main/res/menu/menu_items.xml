@@ -6,12 +6,7 @@
         android:icon="@drawable/inicio"
         android:title="Inicio">
     </item>
-
-    <item
-        android:id="@+id/mensajes"
-        android:icon="@drawable/mensajes"
-        android:title="Mensajes">
-    </item>
+    
     <item
         android:id="@+id/cuenta"
         android:icon="@drawable/cuentanew"
