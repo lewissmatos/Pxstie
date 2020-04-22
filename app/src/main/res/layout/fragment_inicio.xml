@@ -62,9 +62,10 @@
                 android:textColor="#000"
                 android:layout_marginTop="4dp"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_centerInParent="true"
                 android:inputType="text"
                 android:textSize="16sp"
-                android:paddingEnd="10dp"
                 android:background="@drawable/curves">
 
             </EditText>
@@ -75,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@id/btnAddPic"
-                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
                 app:srcCompat="@drawable/postear">
 
             </ImageView>
@@ -84,9 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@id/edPost"
                 app:srcCompat="@drawable/add_photo">
-
             </ImageView>
 
         </RelativeLayout>
