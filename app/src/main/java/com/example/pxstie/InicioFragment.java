@@ -57,7 +57,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
     }
     private ArrayList<Posts> getPostslList() {
         ArrayList<Posts> posts = new ArrayList<>();
-        posts.add(new Posts(R.drawable.yo, "Lewis Matos", "klk vamo a bebe romo?"));
+        posts.add(new Posts(R.drawable.yo, "Lewis Matos", "gracia papá dio otro día sin ser neybero"));
         return posts;
     }
 }
