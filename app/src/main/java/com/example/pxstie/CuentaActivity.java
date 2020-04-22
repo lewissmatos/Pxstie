@@ -14,11 +14,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class CuentaActivity extends AppCompatActivity implements View.OnClickListener{
-
     Window window;
-    Button btnVolver,btnCerrarSesion;
-    TextView txtMasInfo;
+    Button btnCerrarSesion;
+    TextView btnVolver,txtMasInfo;
     AlertDialog.Builder opdialog;
+    private Usuario user;
+    private TextView txtNom, txtUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,8 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
         btnVolver = findViewById(R.id.btnVolver);
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         txtMasInfo = findViewById(R.id.txtMasInfo);
+        txtNom = findViewById(R.id.txtNom);
+        txtUser = findViewById(R.id.txtUser);
 
         btnCerrarSesion.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
@@ -35,6 +39,11 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
         String colorbarra = "#0B7EC5";
         this.window = getWindow();
         window.setStatusBarColor(Color.parseColor(colorbarra));
+
+        user = Preferences.getUserData(this);
+
+        txtNom.setText(user.getNombre());
+        txtUser.setText("@" + user.getCorreo());
     }
 
     @Override

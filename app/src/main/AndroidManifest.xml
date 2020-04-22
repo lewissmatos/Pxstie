@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pxstie">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MasInfoActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".MasInfoActivity" />
         <activity android:name=".CuentaActivity" />
         <activity android:name=".ContenedorActivity" />
         <activity android:name=".SocialActivity" />
-        <activity android:name=".InformacionActivity" />
         <activity android:name=".DatosActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
