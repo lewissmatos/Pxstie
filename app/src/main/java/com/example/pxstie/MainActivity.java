@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         userr = Preferences.getUserData(this);
-        if (!userr.getCorreo().equalsIgnoreCase(" ")){
+        if (!userr.getNombre().equalsIgnoreCase(" ")){
             startActivity(new Intent(this, ContenedorActivity.class));
             finish();
         }

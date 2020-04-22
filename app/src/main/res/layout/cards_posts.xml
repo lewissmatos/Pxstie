@@ -8,70 +8,72 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="350dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="30dp">
 
         <RelativeLayout
             android:id="@+id/rltLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/light_texts_color">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true"
-                app:cardCornerRadius="30dp">
 
-                <ImageView
-                    android:id="@+id/img"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/yo" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                app:srcCompat="@drawable/yo" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="3dp"
-                android:layout_toRightOf="@id/cv"
+                android:layout_below="@+id/img"
                 android:gravity="left"
+                android:paddingLeft="18dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tittle"
+                    android:id="@+id/txtNom"
                     style="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="8dp"
                     android:text="Lewis Matos"
                     android:textStyle="bold"
                     android:textColor="#000"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/puntuacion"
+                    android:id="@+id/txtCaption"
                     style="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_toRightOf="@id/cv"
-                    android:text="klk vamo a bebe romo?"
+                    android:layout_below="@+id/txtNom"
+                    android:text="gracia papá dio otro día sin ser neybero"
                     android:layout_marginTop="4dp"
                     android:textColor="#656565"
                     android:textSize="14sp"
                     />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/estrella_normal">
+
+                </ImageView>
+
+            </RelativeLayout>
 
 
         </RelativeLayout>

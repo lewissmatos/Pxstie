@@ -102,7 +102,7 @@ public class Usuario {
                 if (response.isEmpty()) {
                     Toast.makeText(context, "Se ha registrado correctamente", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
-                    context.startActivity(new Intent(context, ContenedorActivity.class));
+                    context.startActivity(new Intent(context, MainActivity.class));
                 }
                 else{
                     Toast.makeText(context, response,  Toast.LENGTH_LONG).show();
