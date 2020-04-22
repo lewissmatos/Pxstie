@@ -15,17 +15,16 @@
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:background="@color/rose"
-            android:gravity="right"
-            android:paddingEnd="30dp"
-            android:paddingStart="30dp"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
             android:orientation="horizontal">
 
             <SearchView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/curves"
                 android:searchIcon="@drawable/search_grande"
                 >

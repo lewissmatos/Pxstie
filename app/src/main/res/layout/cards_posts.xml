@@ -8,7 +8,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="380dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         app:cardElevation="3dp"
@@ -42,7 +42,7 @@
                     style="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="8dp"
                     android:text="Lewis Matos"
                     android:textStyle="bold"
@@ -51,27 +51,55 @@
 
                 <TextView
                     android:id="@+id/txtCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_below="@+id/txtNom"
+                    android:maxLength="50"
+                    android:text="gracia papá dio otro día sin ser neybero"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_below="@+id/txtCaption"
+                    android:text="07/02/2020"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#878787"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtLikes"
                     style="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_below="@+id/txtNom"
-                    android:text="gracia papá dio otro día sin ser neybero"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="4dp"
-                    android:textColor="#656565"
-                    android:textSize="14sp"
-                    />
+                    android:layout_marginRight="20dp"
+                    android:inputType="number"
+                    android:text="00"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="18dp"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="10dp"
                     app:srcCompat="@drawable/estrella_normal">
 
                 </ImageView>
+
 
             </RelativeLayout>
 

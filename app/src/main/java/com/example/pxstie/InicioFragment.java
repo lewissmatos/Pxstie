@@ -41,6 +41,14 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         btnPostear.setOnClickListener(this);
         btnAddPic.setOnClickListener(this);
 
+        edPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edPost.setFocusable(true);
+            }
+        });
+
+
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager (new LinearLayoutManager(getContext()));
 
@@ -58,6 +66,10 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
     private ArrayList<Posts> getPostslList() {
         ArrayList<Posts> posts = new ArrayList<>();
         posts.add(new Posts(R.drawable.yo, "Lewis Matos", "gracia papá dio otro día sin ser neybero"));
+        posts.add(new Posts(R.drawable.alofoke, "Santiago Matías", "donde ta topo??"));
+        posts.add(new Posts(R.drawable.alondra, "Alondra Gómez", "Lewis me tiene asfixiaaaa"));
+        posts.add(new Posts(R.drawable.pan, "Pan Matos", "con la prima"));
+        posts.add(new Posts(R.drawable.gangstars, "Lo moreno bailarines", "A trabajar con el equipo!"));
         return posts;
     }
 }
