@@ -50,7 +50,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="70dp"
             android:background="@drawable/bg_panel_post"
             android:padding="10dp">
 
