@@ -14,37 +14,37 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:background="#fff"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/lyPrin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/azul"
-            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/azul"
+                >
 
-            <ImageView
-                android:id="@+id/btnVolver"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/anterior" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Más información"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:layout_marginStart="40dp"
-                android:layout_marginRight="12dp"
-                android:textSize="30sp"
-                android:gravity="center"/>
+                <ImageView
+                    android:id="@+id/btnVolver"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="14dp"
+                    app:srcCompat="@drawable/anterior" />
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Más información"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_texts_color"
+                    android:textSize="26sp" />
 
-        </LinearLayout>
+            </RelativeLayout>
 
     </LinearLayout>
         <LinearLayout
