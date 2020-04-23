@@ -3,8 +3,10 @@ package com.example.pxstie;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +15,7 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
     ImageView btnVolver;
     private Usuario user;
     private TextView txtNom, txtUser, txtFecha, txtGenero;
-
+    Window window;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,12 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
         txtUser.setText("@" + user.getCorreo());
         txtFecha.setText(user.getFecha());
         txtGenero.setText(user.getGenero());
+
+        String colorbarra = "#0B7EC5";
+
+        this.window = getWindow();
+        //barcolor
+        window.setStatusBarColor(Color.parseColor(colorbarra));
     }
 
     @Override
