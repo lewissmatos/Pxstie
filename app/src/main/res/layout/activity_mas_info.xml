@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/rose"
+        android:background="@color/azul"
         android:gravity="center_horizontal"
         android:orientation="vertical">
         <LinearLayout
@@ -22,7 +22,7 @@
             android:id="@+id/lyPrin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/rose"
+            android:background="@color/azul"
             android:orientation="horizontal">
 
             <ImageView
@@ -136,7 +136,7 @@
                             android:padding="8dp"
                             android:maxLength="24"
                             android:paddingEnd="10dp"
-                            android:drawableLeft="@drawable/calendario"
+                            android:drawableLeft="@drawable/cumple"
                             android:textSize="15sp" />
 
                             <TextView
@@ -209,7 +209,7 @@
                             android:hint="Facebook"
                             android:padding="8dp"
                             android:paddingEnd="30dp"
-                            android:drawableLeft="@drawable/fb1"
+                            android:drawableLeft="@drawable/fb2"
                             android:layout_marginTop="18dp"
                             android:textSize="15sp" />
 
@@ -223,7 +223,7 @@
                             android:hint="Twitter"
                             android:paddingEnd="30dp"
                             android:inputType="text"
-                            android:drawableLeft="@drawable/tt1"
+                            android:drawableLeft="@drawable/tt2"
                             android:layout_marginTop="18dp"
                             android:padding="8dp"
                             android:textSize="15sp" />
@@ -235,9 +235,10 @@
                             android:background="@drawable/curves"
                             android:gravity="center"
                             android:ems="10"
-                            android:text="-"
+                            android:text="000-000-0000"
                             android:padding="8dp"
                             android:paddingEnd="30dp"
+                            android:maxLength="12"
                             android:inputType="number"
                             android:drawableLeft="@drawable/telefono"
                             android:layout_marginTop="18dp"
