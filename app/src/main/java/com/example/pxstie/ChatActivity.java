@@ -26,6 +26,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.btnVolver:
                 startActivity(new Intent(this, MensajesActivity.class));
+                finish();
         }
     }
 }

@@ -25,6 +25,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()){
             case R.id.btnVolver:
                 startActivity(new Intent(this, ContenedorActivity.class));
+                finish();
         }
     }
 }

@@ -47,7 +47,7 @@
                    android:id="@+id/imgUser"
                    android:layout_width="60dp"
                    android:layout_height="60dp"
-                   app:srcCompat="@drawable/yo" />
+                   app:srcCompat="@drawable/usuarioicon" />
            </androidx.cardview.widget.CardView>
 
            <TextView

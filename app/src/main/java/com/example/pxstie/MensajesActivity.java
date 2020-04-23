@@ -38,6 +38,7 @@ public class MensajesActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.btnVolver:
                 startActivity(new Intent(this, ContenedorActivity.class));
+                finish();
         }
     }
     private ArrayList<Mensajes> getMensasjeslList() {

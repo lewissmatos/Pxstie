@@ -37,9 +37,6 @@ public class ContenedorActivity extends AppCompatActivity {
                         case R.id.inicio:
                             selectedFragment = new InicioFragment();
                             break;
-                        /*case R.id.mensajes:
-                            selectedFragment = new MensajesFragment();
-                            break;*/
                         case R.id.notificaciones:
                             selectedFragment = new NotificacionesFragment();
                             break;
