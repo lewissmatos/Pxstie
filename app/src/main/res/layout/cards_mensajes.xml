@@ -19,21 +19,22 @@
             android:id="@+id/rltLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
             android:background="@color/light_texts_color">
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true"
-                app:cardCornerRadius="30dp">
-
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="28dp"
+                >
                 <ImageView
                     android:id="@+id/img"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     app:srcCompat="@drawable/yo" />
             </androidx.cardview.widget.CardView>
 
@@ -42,6 +43,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="3dp"
+                android:layout_marginLeft="8dp"
                 android:layout_toRightOf="@id/cv"
                 android:gravity="left"
                 android:orientation="vertical">

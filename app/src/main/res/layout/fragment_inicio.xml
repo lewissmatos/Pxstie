@@ -15,30 +15,30 @@
         >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/bg_panel_post"
             android:backgroundTint="@color/rose"
             >
 
             <ImageView
                 android:id="@+id/btnMensajes"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginStart="20dp"
                 app:srcCompat="@drawable/mensajes" />
             <TextView
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:text="Inicio"
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
                 android:textColor="@color/light_texts_color"
-                android:textSize="34sp" />
+                android:textSize="26sp" />
 
         </RelativeLayout>
 
@@ -51,21 +51,22 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="46dp"
             android:background="@drawable/bg_panel_post"
             android:padding="6dp">
 
             <EditText
                 android:id="@+id/edPost"
                 android:layout_width="280dp"
-                android:layout_height="40dp"
+                android:layout_height="34dp"
                 android:inputType="text"
                 android:padding="6dp"
                 android:layout_alignParentLeft="true"
-                android:paddingEnd="8dp"
-                android:paddingStart="8dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
                 android:layout_marginStart="6dp"
                 android:textColor="#000"
+                android:maxLength="90"
                 android:layout_marginTop="2dp"
                 android:textSize="16dp"
                 android:background="@drawable/curves"

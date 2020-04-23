@@ -24,7 +24,7 @@
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="wrap_content"
-                android:layout_height="260dp"
+                android:layout_height="240dp"
                 app:srcCompat="@drawable/yo" />
 
             <RelativeLayout
@@ -47,7 +47,7 @@
                     android:text="Lewis Matos"
                     android:textStyle="bold"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/txtCaption"
@@ -66,36 +66,46 @@
                     android:id="@+id/txtFecha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginStart="6dp"
-                    android:layout_below="@+id/txtCaption"
+                    android:layout_marginTop="26dp"
                     android:text="07/02/2020"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
                     android:textColor="#878787"
-                    android:textSize="12sp"
-                    />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/txtLikes"
-                    style="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtCaption"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginRight="20dp"
                     android:inputType="number"
                     android:text="00"
+                    style="bold"
                     android:textColor="#000"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
+                <ImageView
+                    android:id="@+id/comentar"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_toLeftOf="@+id/like"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    app:srcCompat="@drawable/comentar1">
+
+                </ImageView>
                 <ImageView
                     android:id="@+id/like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginBottom="8dp"
                     app:srcCompat="@drawable/estrella_normal">
 
                 </ImageView>

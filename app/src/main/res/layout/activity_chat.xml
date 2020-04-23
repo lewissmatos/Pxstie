@@ -28,18 +28,20 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 app:srcCompat="@drawable/anterior" />
-            <TextView
-                android:id="@+id/txtTitulo"
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Chat"
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                android:textStyle="bold"
-                android:textColor="@color/light_texts_color"
-                android:textSize="34sp" />
-
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                app:cardCornerRadius="20dp"
+                >
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/yo" />
+            </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
         <RelativeLayout
@@ -56,6 +58,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:padding="8dp"
+                android:layout_marginBottom="4dp"
                 android:layout_alignParentBottom="true">
                 <EditText
                     android:id="@+id/edEscribir"
