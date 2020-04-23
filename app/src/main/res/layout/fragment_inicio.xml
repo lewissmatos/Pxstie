@@ -24,7 +24,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="20dp"
                 app:srcCompat="@drawable/mensajes" />
             <TextView
@@ -50,43 +50,51 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="@drawable/bg_panel_post"
             android:padding="10dp">
 
-            <ImageView
-                android:id="@+id/btnAddPic"
-                android:layout_width="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/edPost"
-                app:srcCompat="@drawable/add_photo">
-            </ImageView>
-
             <EditText
                 android:id="@+id/edPost"
-                android:layout_width="290dp"
+                android:layout_width="270dp"
                 android:layout_height="40dp"
                 android:inputType="text"
                 android:padding="6dp"
-                android:layout_centerInParent="true"
-                android:paddingEnd="4dp"
-                android:paddingStart="4dp"
-                android:layout_marginStart="20dp"
+                android:layout_alignParentLeft="true"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:layout_marginStart="6dp"
                 android:textColor="#000"
+                android:layout_marginTop="2dp"
                 android:textSize="16dp"
                 android:background="@drawable/curves"
                 >
             </EditText>
-
+            <ImageView
+                android:id="@+id/btnAddPic"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                app:srcCompat="@drawable/add_photo">
+            </ImageView>
+            <ImageView
+                android:id="@+id/btnAddPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_toLeftOf="@id/btnAddPic"
+                app:srcCompat="@drawable/addpost">
+            </ImageView>
             <ImageView
                 android:id="@+id/btnPostear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/edPost"
-                android:layout_alignParentRight="true"
+                android:layout_marginStart="4dp"
+                android:layout_toLeftOf="@id/btnAddPost"
                 app:srcCompat="@drawable/postear">
 
             </ImageView>
@@ -95,7 +103,6 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white_smoke"

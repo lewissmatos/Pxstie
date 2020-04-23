@@ -23,9 +23,10 @@ import java.util.ArrayList;
 
 public class InicioFragment extends Fragment implements View.OnClickListener {
 
-    ImageView btnMensajes, btnAddPic, btnPostear;
+    ImageView btnMensajes, btnAddPic, btnPostear, btnAddPost;
     RecyclerView recyclerView;
     EditText edPost;
+    boolean activo=false;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,11 +36,42 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         btnMensajes = view.findViewById(R.id.btnMensajes);
         btnPostear = view.findViewById(R.id.btnPostear);
         btnAddPic = view.findViewById(R.id.btnAddPic);
+        btnAddPost = view.findViewById(R.id.btnAddPost);
         edPost = view.findViewById(R.id.edPost);
 
         btnMensajes.setOnClickListener(this);
         btnPostear.setOnClickListener(this);
         btnAddPic.setOnClickListener(this);
+        btnAddPost.setOnClickListener(this);
+
+        edPost.setVisibility(View.INVISIBLE);
+        btnPostear.setVisibility(View.INVISIBLE);
+        edPost.setEnabled(false);
+        btnPostear.setEnabled(false);
+
+        btnAddPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!activo){
+                    btnAddPost.setImageResource(R.drawable.close);
+                    activo = true;
+                    edPost.setVisibility(View.VISIBLE);
+                    btnPostear.setVisibility(View.VISIBLE);
+                    edPost.setEnabled(true);
+                    btnPostear.setEnabled(true);
+                }
+                else {
+                    btnAddPost.setImageResource(R.drawable.addpost);
+                    activo = false;
+                    edPost.setVisibility(View.INVISIBLE);
+                    btnPostear.setVisibility(View.INVISIBLE);
+                    edPost.setEnabled(false);
+                    btnPostear.setEnabled(false);
+                }
+
+            }
+        });
 
 
         recyclerView = view.findViewById(R.id.recyclerView);
