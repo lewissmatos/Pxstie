@@ -41,13 +41,6 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         btnPostear.setOnClickListener(this);
         btnAddPic.setOnClickListener(this);
 
-        edPost.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                edPost.setFocusable(true);
-            }
-        });
-
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager (new LinearLayoutManager(getContext()));
