@@ -12,7 +12,33 @@
         android:background="#fff"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/rose"
+            >
 
+            <ImageView
+                android:id="@+id/btnVolver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                app:srcCompat="@drawable/anterior" />
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Post"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textColor="@color/light_texts_color"
+                android:textSize="26sp" />
+
+        </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rltLayout"
         android:layout_width="match_parent"
@@ -25,29 +51,28 @@
             android:layout_height="240dp"
             app:srcCompat="@drawable/yo" />
 
-        <Button
-            android:id="@+id/btnVolver"
-            android:layout_width="60dp"
-            android:layout_height="36dp"
-            android:background="@drawable/curves"
-            android:backgroundTint="#fff"
-            android:layout_marginTop="12dp"
-            android:text="Volver"
-            android:textColor="@color/rose"
-            android:layout_marginLeft="16dp"
-            android:layout_alignParentLeft="true"
-            android:textSize="10dp">
 
-        </Button>
         <TextView
             android:id="@+id/txtNom"
-            style="bold"
             android:layout_below="@+id/img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginTop="8dp"
             android:text="Lewis Matos"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/punto"
+            android:layout_below="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtNom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="•"
             android:textStyle="bold"
             android:textColor="#000"
             android:textSize="20sp" />
@@ -60,7 +85,7 @@
             android:layout_below="@+id/txtNom"
             android:maxLength="50"
             android:text="gracia papá dio otro día sin ser neybero"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:textColor="#333333"
             android:textSize="16sp"
             />
@@ -71,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtCaption"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="24dp"
             android:text="07/02/2020"
             android:layout_marginBottom="10dp"
             android:textColor="#878787"
@@ -81,9 +106,10 @@
             android:id="@+id/txtLikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/estrella"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="2dp"
             android:inputType="number"
             android:text="00"
             android:layout_marginEnd="14dp"
@@ -92,10 +118,13 @@
             android:textSize="20sp" />
 
         <ImageView
+            android:id="@+id/estrella"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_toLeftOf="@+id/txtLikes"
-            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/punto"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
             app:srcCompat="@drawable/estrella_llena">
         </ImageView>
 
@@ -105,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtCaption"
             android:layout_marginLeft="281dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="14dp"
             android:layout_toRightOf="@+id/txtFecha"
             app:srcCompat="@drawable/estrella_normal">

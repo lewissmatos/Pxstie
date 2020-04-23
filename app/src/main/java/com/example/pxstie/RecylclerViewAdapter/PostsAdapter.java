@@ -43,6 +43,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         holder.image.setImageResource(posts.get(position).getImage());
         holder.nombre.setText(posts.get(position).getNombre());
         holder.caption.setText(posts.get(position).getCaption());
+        holder.idPost.setText(posts.get(position).getIdPost());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +71,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         ImageView image, like;
         TextView nombre, caption;
         LinearLayout parent;
+        TextView idPost;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,7 +81,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 public void onClick(View v) {
                     Intent i = new Intent(context, PostCompletoActivity.class);
                     Bundle b = new Bundle();
-                    b.putInt("id", getAdapterPosition());
+                    b.putString("id", idPost.getText().toString());
                     i.putExtras(b);
                     context.startActivity(i);
                 }
@@ -88,6 +90,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             nombre = itemView.findViewById(R.id.txtNom);
             caption = itemView.findViewById(R.id.txtCaption);
             like = itemView.findViewById(R.id.like);
+            idPost = itemView.findViewById(R.id.idPost);
             parent = itemView.findViewById(R.id.parent);
         }
     }

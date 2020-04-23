@@ -7,7 +7,7 @@ public class Posts {
     private int like;
     private String nombre;
     private String caption;
-
+    private String idPost;
     public Posts(int image, String nombre, String mensaje) {
         this.image = image;
         this.nombre = nombre;
@@ -36,5 +36,13 @@ public class Posts {
 
     public void setCaption(String caption) {
         this.caption = caption;
+    }
+
+    public String getIdPost() {
+        return idPost;
+    }
+
+    public void setIdPost(String idPost) {
+        this.idPost = idPost;
     }
 }
