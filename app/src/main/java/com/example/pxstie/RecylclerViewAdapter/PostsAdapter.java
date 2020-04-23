@@ -2,6 +2,7 @@ package com.example.pxstie.RecylclerViewAdapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pxstie.ChatActivity;
 import com.example.pxstie.CuentaActivity;
+import com.example.pxstie.PostCompletoActivity;
 import com.example.pxstie.R;
 
 import java.util.ArrayList;
@@ -72,16 +74,16 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            /*itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context, ChatActivity.class);
+                    Intent i = new Intent(context, PostCompletoActivity.class);
                     Bundle b = new Bundle();
                     b.putInt("id", getAdapterPosition());
                     i.putExtras(b);
                     context.startActivity(i);
                 }
-            });*/
+            });
             image = itemView.findViewById(R.id.img);
             nombre = itemView.findViewById(R.id.txtNom);
             caption = itemView.findViewById(R.id.txtCaption);

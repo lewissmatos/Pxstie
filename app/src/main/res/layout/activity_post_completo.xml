@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostCompletoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rltLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_texts_color">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            app:srcCompat="@drawable/yo" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:background="@drawable/curves"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="12dp"
+            android:text="Volver"
+            android:textColor="@color/rose"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="10dp">
+
+        </Button>
+        <TextView
+            android:id="@+id/txtNom"
+            style="bold"
+            android:layout_below="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:text="Lewis Matos"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_below="@+id/txtNom"
+            android:maxLength="50"
+            android:text="gracia papá dio otro día sin ser neybero"
+            android:layout_marginTop="2dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txtFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCaption"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="26dp"
+            android:text="07/02/2020"
+            android:layout_marginBottom="10dp"
+            android:textColor="#878787"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentRight="true"
+            android:inputType="number"
+            android:text="00"
+            android:layout_marginEnd="14dp"
+            style="bold"
+            android:textColor="@color/rose"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@+id/txtLikes"
+            android:layout_marginTop="6dp"
+            app:srcCompat="@drawable/estrella_llena">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCaption"
+            android:layout_marginLeft="281dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/txtFecha"
+            app:srcCompat="@drawable/estrella_normal">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true">
+            <EditText
+                android:id="@+id/edComentario"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:inputType="text"
+                android:padding="6dp"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:background="@drawable/curves"
+                >
+            </EditText>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="6dp"
+                app:srcCompat="@drawable/enviar"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/edEscribir">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/txtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
