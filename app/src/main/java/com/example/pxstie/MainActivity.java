@@ -11,6 +11,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edUser, edPass;
@@ -64,7 +75,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     dialog.dismiss();
                 }
                 else {
-                    Usuario.IniciarSesion(this, dialog, user, password);
+                    String url = "https://thejopipedia.000webhostapp.com/wsJSONLoginPx.php?correo=" + user + "&pass=" + password;
+
+                    url = url.replace(" ", "%20");
+
+                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            JSONArray json = response.optJSONArray("usuario");
+
+                            try {
+                                for (int i = 0; i < json.length(); i++){
+                                    Usuario user = new Usuario();
+                                    JSONObject jsonObject = null;
+                                    jsonObject = json.getJSONObject(i);
+
+                                    user.setIdusuario(jsonObject.getString("id"));
+                                    user.setNombre(jsonObject.getString("nombre"));
+                                    user.setCorreo(jsonObject.getString("usuario"));
+                                    user.setContraseña(jsonObject.getString("contraseña"));
+                                    user.setGenero(jsonObject.getString("genero"));
+                                    user.setFecha(jsonObject.getString("fecha"));
+
+                                    Preferences.SaveUserData(MainActivity.this, user.getIdUsuario(), user.getNombre(), user.getCorreo(), user.getContraseña(), user.getGenero(), user.getFecha());
+                                }
+                                dialog.dismiss();
+                                startActivity(new Intent(MainActivity.this, ContenedorActivity.class));
+                                finish();
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                dialog.dismiss();
+                                Toast.makeText(MainActivity.this, R.string.no_estab_conex, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(MainActivity.this, R.string.no_inic_sesion, Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
+                    });
+
+                    RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+                    requestQueue.add(jsonObjectRequest);
                 }
                 break;
         }
