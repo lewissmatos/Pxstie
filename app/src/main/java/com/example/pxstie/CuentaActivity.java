@@ -50,8 +50,7 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnVolver:
-                startActivity(new Intent(this, ContenedorActivity.class));
-                finish();
+                onBackPressed();
                 break;
             case R.id.txtMasInfo:
                 startActivity(new Intent(this, MasInfoActivity.class));
