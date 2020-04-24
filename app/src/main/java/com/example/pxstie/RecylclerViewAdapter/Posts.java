@@ -8,8 +8,15 @@ public class Posts {
     private String nombre;
     private String caption;
     private String idPost;
+
     public Posts(int image, String nombre, String mensaje) {
         this.image = image;
+        this.nombre = nombre;
+        this.caption = mensaje;
+    }
+
+    public Posts(String nombre, String mensaje) {
+        this.image = 0;
         this.nombre = nombre;
         this.caption = mensaje;
     }

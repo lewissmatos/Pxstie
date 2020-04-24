@@ -25,6 +25,7 @@
                 android:id="@+id/img"
                 android:layout_width="wrap_content"
                 android:layout_height="240dp"
+                android:visibility="gone"
                 app:srcCompat="@drawable/yo" />
 
                 <TextView

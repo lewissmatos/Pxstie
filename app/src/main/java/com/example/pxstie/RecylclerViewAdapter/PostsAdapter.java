@@ -40,9 +40,19 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull final PostsAdapter.ViewHolder holder, int position) {
-        holder.image.setImageResource(posts.get(position).getImage());
+        if (posts.get(position).getImage() != 0){
+            holder.image.setVisibility(View.VISIBLE);
+            holder.image.setImageResource(posts.get(position).getImage());
+        }
+
+        if (posts.get(position).getCaption().length() > 70){
+            holder.caption.setText(posts.get(position).getCaption().substring(0, 70) + "...");
+        }
+        else {
+            holder.caption.setText(posts.get(position).getCaption());
+        }
+
         holder.nombre.setText(posts.get(position).getNombre());
-        holder.caption.setText(posts.get(position).getCaption());
         holder.idPost.setText(posts.get(position).getIdPost());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
