@@ -99,8 +99,9 @@
                    android:drawableLeft="@drawable/nom_completo"
                    android:padding="8dp"
                    android:layout_marginTop="10dp"
-                   android:textSize="15dp" />
+                   android:textSize="16sp"
 
+                   />
                <TextView
                    android:id="@+id/txtUser"
                    android:layout_width="260dp"

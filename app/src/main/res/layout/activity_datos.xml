@@ -35,9 +35,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/registrarse"
-                    android:drawableLeft="@drawable/add_circle"
-                    android:drawablePadding="-110dp"
-                    android:paddingLeft="80dp"
                     android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="40sp"
@@ -89,7 +86,7 @@
                         android:drawableLeft="@drawable/nom_completo"
                         android:padding="8dp"
                         android:layout_marginTop="18dp"
-                        android:textSize="15dp" />
+                        android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/edUser"
@@ -104,7 +101,7 @@
                         android:paddingEnd="30dp"
                         android:drawableLeft="@drawable/usuarioicon"
                         android:layout_marginTop="14dp"
-                        android:textSize="15sp" />
+                        android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/edPass"
@@ -119,7 +116,7 @@
                         android:drawableLeft="@drawable/passicon"
                         android:layout_marginTop="14dp"
                         android:padding="8dp"
-                        android:textSize="15sp" />
+                        android:textSize="16sp" />
 
                     <EditText
                         android:id="@+id/edRPass"
@@ -176,7 +173,7 @@
                             android:layout_marginStart="10dp"
                             android:maxLength="24"
                             android:layout_marginTop="14dp"
-                            android:textSize="15sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 

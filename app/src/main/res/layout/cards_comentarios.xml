@@ -56,7 +56,6 @@
                     android:layout_marginTop="6dp"
                     android:layout_toRightOf="@id/cv"
                     android:layout_below="@+id/txtNombre"
-
                     android:text="klk vamo a bebe romo?"
                     android:textColor="#656565"
                     android:textSize="16sp" />

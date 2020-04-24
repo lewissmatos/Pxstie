@@ -102,7 +102,7 @@
                             android:drawableLeft="@drawable/nom_completo"
                             android:padding="8dp"
                             android:layout_marginTop="10dp"
-                            android:textSize="15dp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/txtUser"
@@ -117,7 +117,7 @@
                             android:paddingEnd="30dp"
                             android:drawableLeft="@drawable/usuarioicon"
                             android:layout_marginTop="18dp"
-                            android:textSize="15sp" />
+                            android:textSize="16sp" />
 
                         <LinearLayout
                             android:layout_width="300dp"
@@ -197,7 +197,7 @@
                             android:drawableLeft="@drawable/ig1"
                             android:padding="8dp"
                             android:layout_marginTop="10dp"
-                            android:textSize="15dp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/edFacebook"
@@ -211,7 +211,7 @@
                             android:paddingEnd="30dp"
                             android:drawableLeft="@drawable/fb2"
                             android:layout_marginTop="18dp"
-                            android:textSize="15sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/edTwitter"
@@ -226,7 +226,7 @@
                             android:drawableLeft="@drawable/tt2"
                             android:layout_marginTop="18dp"
                             android:padding="8dp"
-                            android:textSize="15sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/txtTeléfono"
@@ -242,7 +242,7 @@
                             android:inputType="number"
                             android:drawableLeft="@drawable/telefono"
                             android:layout_marginTop="18dp"
-                            android:textSize="15sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
