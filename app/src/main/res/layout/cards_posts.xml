@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtLikes"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="6dp"
                     android:text="07/02/2020"
                     android:layout_marginBottom="10dp"
                     android:textColor="#878787"
@@ -81,8 +81,8 @@
                 android:id="@+id/comentar"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_below="@+id/txtLikes"
-                android:layout_marginTop="4dp"
+                android:layout_below="@+id/txtCaption"
+                android:layout_marginTop="6dp"
                 android:layout_marginRight="8dp"
                 android:layout_toLeftOf="@+id/like"
                 app:srcCompat="@drawable/comentar1">
@@ -93,8 +93,9 @@
                 android:id="@+id/like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtLikes"
+                android:layout_below="@+id/txtCaption"
                 android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
                 android:layout_marginRight="14dp"
                 app:srcCompat="@drawable/estrella_normal">
 
