@@ -13,7 +13,7 @@
         android:layout_marginLeft="10dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
-        app:cardCornerRadius="30dp">
+        app:cardCornerRadius="20dp">
 
         <RelativeLayout
             android:id="@+id/rltLayout"
@@ -58,10 +58,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtLikes"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="2dp"
                     android:text="07/02/2020"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="6dp"
                     android:textColor="#878787"
                     android:textSize="12sp" />
 
@@ -74,7 +74,7 @@
                     android:layout_marginTop="4dp"
                     android:inputType="number"
                     android:text="00"
-                    style="bold"
+                    android:textStyle="bold"
                     android:textColor="@color/rose"
                     android:textSize="14sp" />
 

@@ -24,16 +24,16 @@
                 android:id="@+id/btnMensajes"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 app:srcCompat="@drawable/mensajes" />
             <TextView
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Inicio"
+                android:text="Pxstie"
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
@@ -57,7 +57,7 @@
 
             <EditText
                 android:id="@+id/edPost"
-                android:layout_width="280dp"
+                android:layout_width="260dp"
                 android:layout_height="34dp"
                 android:inputType="text"
                 android:padding="6dp"
@@ -97,6 +97,7 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="4dp"
+                android:layout_marginLeft="2dp"
                 android:layout_toLeftOf="@id/btnAddPost"
                 app:srcCompat="@drawable/postear">
 

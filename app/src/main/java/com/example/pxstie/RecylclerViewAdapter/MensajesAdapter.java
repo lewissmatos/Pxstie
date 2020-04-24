@@ -74,8 +74,8 @@ public class MensajesAdapter extends RecyclerView.Adapter<MensajesAdapter.ViewHo
                 }
             });*/
             image = itemView.findViewById(R.id.img);
-            nombre = itemView.findViewById(R.id.tittle);
-            mensaje = itemView.findViewById(R.id.puntuacion);
+            nombre = itemView.findViewById(R.id.txtNombre);
+            mensaje = itemView.findViewById(R.id.txtMensaje);
             parent = itemView.findViewById(R.id.parent);
         }
     }

@@ -30,7 +30,7 @@
                     android:layout_height="30dp"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="14dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/anterior" />
                 <TextView
                     android:id="@+id/txtTitulo"
@@ -190,7 +190,6 @@
                             android:layout_width="260dp"
                             android:layout_height="44dp"
                             android:gravity="center"
-                            android:inputType="text"
                             android:background="@drawable/curves"
                             android:hint="Instagram"
                             android:paddingEnd="30dp"
@@ -204,7 +203,6 @@
                             android:layout_width="260dp"
                             android:layout_height="44dp"
                             android:gravity="center"
-                            android:inputType="text"
                             android:background="@drawable/curves"
                             android:hint="Facebook"
                             android:padding="8dp"
@@ -222,7 +220,6 @@
                             android:ems="10"
                             android:hint="Twitter"
                             android:paddingEnd="30dp"
-                            android:inputType="text"
                             android:drawableLeft="@drawable/tt2"
                             android:layout_marginTop="18dp"
                             android:padding="8dp"
@@ -239,7 +236,6 @@
                             android:padding="8dp"
                             android:paddingEnd="30dp"
                             android:maxLength="12"
-                            android:inputType="number"
                             android:drawableLeft="@drawable/telefono"
                             android:layout_marginTop="18dp"
                             android:textSize="16sp" />
