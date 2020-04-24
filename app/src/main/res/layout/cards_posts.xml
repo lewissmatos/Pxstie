@@ -80,10 +80,10 @@
 
             <ImageView
                 android:id="@+id/comentar"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_below="@+id/txtCaption"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginRight="8dp"
                 android:layout_toLeftOf="@+id/like"
                 app:srcCompat="@drawable/comentar1">
@@ -92,11 +92,11 @@
 
             <ImageView
                 android:id="@+id/like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_below="@+id/txtCaption"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="14dp"
                 app:srcCompat="@drawable/estrella_normal">
 
