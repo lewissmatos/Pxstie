@@ -75,7 +75,7 @@
                     android:text="00"
                     style="bold"
                     android:textColor="@color/rose"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/comentar"
