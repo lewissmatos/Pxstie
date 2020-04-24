@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class InicioFragment extends Fragment implements View.OnClickListener {
 
-    ImageView btnMensajes, btnAddPic, btnPostear, btnAddPost;
+    ImageView btnMensajes, btnCuenta, btnAddPic, btnPostear, btnAddPost;
     RecyclerView recyclerView;
     EditText edPost;
     boolean activo=false;
@@ -34,12 +34,14 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         View view =  inflater.inflate(R.layout.fragment_inicio, container, false);
 
         btnMensajes = view.findViewById(R.id.btnMensajes);
+        btnCuenta = view.findViewById(R.id.btnCuenta);
         btnPostear = view.findViewById(R.id.btnPostear);
         btnAddPic = view.findViewById(R.id.btnAddPic);
         btnAddPost = view.findViewById(R.id.btnAddPost);
         edPost = view.findViewById(R.id.edPost);
 
         btnMensajes.setOnClickListener(this);
+        btnCuenta.setOnClickListener(this);
         btnPostear.setOnClickListener(this);
         btnAddPic.setOnClickListener(this);
         btnAddPost.setOnClickListener(this);
@@ -86,6 +88,10 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btnMensajes:
                 startActivity(new Intent(getContext(), MensajesActivity.class));
+                break;
+            case R.id.btnCuenta:
+                startActivity(new Intent(getContext(), CuentaActivity.class));
+                break;
         }
     }
     private ArrayList<Posts> getPostslList() {

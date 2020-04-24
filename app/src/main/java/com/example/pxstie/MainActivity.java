@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else {
                     Usuario.IniciarSesion(this, dialog, user, password);
-                    finish();
                 }
                 break;
         }

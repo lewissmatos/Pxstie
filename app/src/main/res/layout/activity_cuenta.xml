@@ -16,24 +16,11 @@
        <RelativeLayout
            android:id="@+id/lyPrin"
            android:layout_width="match_parent"
-           android:layout_height="80dp"
+           android:layout_height="100dp"
            android:background="@color/white_smoke"
            android:orientation="horizontal"
            app:layout_constraintTop_toTopOf="parent"
            >
-
-           <Button
-               android:id="@+id/btnCerrarSesion"
-               android:layout_width="70dp"
-               android:layout_height="40dp"
-               android:layout_marginTop="10dp"
-               android:layout_marginStart="8dp"
-               android:background="@drawable/btn_circulo"
-               android:text="@string/cerrar_sesion"
-               android:textColor="@color/rose"
-               android:textSize="12sp">
-
-           </Button>
 
            <androidx.cardview.widget.CardView
                android:layout_width="wrap_content"
@@ -45,8 +32,8 @@
                >
                <ImageView
                    android:id="@+id/imgUser"
-                   android:layout_width="60dp"
-                   android:layout_height="60dp"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
                    app:srcCompat="@drawable/usuarioicon" />
            </androidx.cardview.widget.CardView>
 

@@ -32,7 +32,7 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
         user = Preferences.getUserData(this);
 
         txtNom.setText(user.getNombre());
-        txtUser.setText("@" + user.getCorreo());
+        txtUser.setText(user.getCorreo());
         txtFecha.setText(user.getFecha());
         txtGenero.setText(user.getGenero());
 

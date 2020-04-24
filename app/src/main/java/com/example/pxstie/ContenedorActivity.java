@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,7 +13,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ContenedorActivity extends AppCompatActivity {
-
+    AlertDialog.Builder opdialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,15 +24,32 @@ public class ContenedorActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new InicioFragment()).commit();
+        opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navLiistener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment selectedFragment = null;
-                    if (menuItem.getItemId() == R.id.cuenta)
+                    if (menuItem.getItemId() == R.id.logOut)
                     {
-                        startActivity(new Intent(ContenedorActivity.this, CuentaActivity.class));
+                        opdialog.setMessage("Seguro que desea cerrar sesión?")
+                                .setIcon(R.drawable.advertencia)
+                                .setTitle(R.string.advertencia)
+                                .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Preferences.SaveUserData(ContenedorActivity.this, "", "", "","", "", "");
+                                        startActivity(new Intent(ContenedorActivity.this, MainActivity.class));
+                                        finish();
+                                    }
+                                }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                        opdialog.create();
+                        opdialog.show();
                     }
                     else
                     switch (menuItem.getItemId()) {
@@ -40,14 +59,11 @@ public class ContenedorActivity extends AppCompatActivity {
                         case R.id.notificaciones:
                             selectedFragment = new NotificacionesFragment();
                             break;
-                        case R.id.buscar:
-                                selectedFragment = new BuscarFragment();
-                                break;
-                    }
-                    if (menuItem.getItemId() != R.id.cuenta){
+
+                    }if (menuItem.getItemId() != R.id.logOut) {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 selectedFragment).commit();
-                     }
+                    }
                     return true;
                 }
             };

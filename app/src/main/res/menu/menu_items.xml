@@ -6,12 +6,7 @@
         android:icon="@drawable/inicio"
         android:title="Inicio">
     </item>
-    
-    <item
-        android:id="@+id/cuenta"
-        android:icon="@drawable/cuentanew"
-        android:title="Cuenta">
-    </item>
+
     <item
         android:id="@+id/notificaciones"
         android:icon="@drawable/notificationes"
@@ -19,9 +14,9 @@
     </item>
 
     <item
-        android:id="@+id/buscar"
-        android:icon="@drawable/search"
-        android:title="Buscar"
+        android:id="@+id/logOut"
+        android:icon="@drawable/log_out"
+        android:title="Cerrar sesión"
         >
     </item>
 

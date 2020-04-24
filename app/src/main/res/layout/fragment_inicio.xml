@@ -19,7 +19,14 @@
             android:background="@drawable/bg_panel_post"
             android:backgroundTint="@color/rose"
             >
-
+            <ImageView
+                android:id="@+id/btnCuenta"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/cuentanew" />
             <ImageView
                 android:id="@+id/btnMensajes"
                 android:layout_width="26dp"

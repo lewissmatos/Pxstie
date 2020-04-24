@@ -27,12 +27,10 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_cuenta);
 
         btnVolver = findViewById(R.id.btnVolver);
-        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         txtMasInfo = findViewById(R.id.txtMasInfo);
         txtNom = findViewById(R.id.txtNom);
         txtUser = findViewById(R.id.txtUser);
 
-        btnCerrarSesion.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
         txtMasInfo.setOnClickListener(this);
 
@@ -56,26 +54,7 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(new Intent(this, MasInfoActivity.class));
                 finish();
                 break;
-            case R.id.btnCerrarSesion:
-                opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
-                opdialog.setMessage("Seguro que desea cerrar sesión?")
-                        .setIcon(R.drawable.advertencia)
-                        .setTitle(R.string.advertencia)
-                        .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Preferences.SaveUserData(CuentaActivity.this, "", "", "","", "", "");
-                                startActivity(new Intent(CuentaActivity.this, MainActivity.class));
-                                finish();
-                            }
-                        }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-                opdialog.create();
-                opdialog.show();
-            break;
+
         }
     }
 }

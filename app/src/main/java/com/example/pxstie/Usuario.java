@@ -77,13 +77,13 @@ public class Usuario {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     dialog.dismiss();
-                    Toast.makeText(context, "Ha ocurrio un ERROR", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, R.string.no_estab_conex, Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Ha ocurrido un ERROR", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.no_inic_sesion, Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
