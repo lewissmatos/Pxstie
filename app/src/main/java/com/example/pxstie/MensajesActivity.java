@@ -37,8 +37,7 @@ public class MensajesActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnVolver:
-                startActivity(new Intent(this, ContenedorActivity.class));
-                finish();
+               onBackPressed();
         }
     }
     private ArrayList<Mensajes> getMensasjeslList() {

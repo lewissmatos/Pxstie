@@ -83,7 +83,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         LinearLayout parent;
         TextView idPost;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull final View itemView) {
             super(itemView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +94,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     b.putString("id", idPost.getText().toString());
                     i.putExtras(b);
                     context.startActivity(i);
+                    itemView.setActivated(true);
                 }
             });
             image = itemView.findViewById(R.id.img);

@@ -34,14 +34,16 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                 }
             }
         });
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnVolver:
-                startActivity(new Intent(this, ContenedorActivity.class));
-                finish();
+                onBackPressed();
+                /*startActivity(new Intent(this, ContenedorActivity.class));
+                finish();*/
         }
     }
 }
