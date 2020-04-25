@@ -33,7 +33,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     @NonNull
     @Override
     public PostsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cards_posts, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.newdesignposts, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -45,12 +45,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             holder.image.setImageResource(posts.get(position).getImage());
         }
 
-        if (posts.get(position).getCaption().length() > 70){
+        /*if (posts.get(position).getCaption().length() > 70){
             holder.caption.setText(posts.get(position).getCaption().substring(0, 70) + "...");
         }
         else {
             holder.caption.setText(posts.get(position).getCaption());
-        }
+        }*/
+
+        holder.caption.setText(posts.get(position).getCaption());
 
         holder.nombre.setText(posts.get(position).getNombre());
         holder.fecha.setText(posts.get(position).getFecha());

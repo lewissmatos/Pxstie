@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rltLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:background="@color/light_texts_color">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/yo" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/perfil3" />
+
+            <TextView
+                android:id="@+id/txtNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eiron Diaz"
+                android:layout_below="@+id/img"
+                android:layout_toRightOf="@id/profile"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="gracia papá dio otro día sin ser neybero"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txtFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNom"
+                android:layout_toRightOf="@id/profile"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="07/02/2020"
+                android:layout_marginBottom="6dp"
+                android:textColor="#878787"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/estar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/estrella_llena"
+                android:layout_below="@id/txtCaption"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="3dp"/>
+
+            <TextView
+                android:id="@+id/txtLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCaption"
+                android:layout_toRightOf="@id/estar"
+                android:layout_marginTop="14dp"
+                android:inputType="number"
+                android:text="00"
+                android:textStyle="bold"
+                android:textColor="@color/rose"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/comentar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/txtCaption"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/like"
+                app:srcCompat="@drawable/comentar1">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/txtCaption"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="14dp"
+                app:srcCompat="@drawable/estrella_normal">
+
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/idPost"
+                android:layout_width="wrap_content"
+                android:textSize="1sp"
+                android:textColor="#fff"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+
+</LinearLayout>
