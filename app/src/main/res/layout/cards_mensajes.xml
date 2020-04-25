@@ -37,11 +37,11 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_toRightOf="@id/img"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="6dp"
             android:orientation="vertical"
             android:layout_below="@id/txtNombre"
-            android:background="#878787"
+            android:background="#A3A3A3"
             >
 
         </LinearLayout>

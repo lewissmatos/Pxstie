@@ -12,6 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="14dp"
+            android:paddingRight="26dp"
             android:background="@color/light_texts_color">
 
                 <ImageView
@@ -26,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/img"
                     android:text="Lewis Matos"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="18dp"
                     android:textStyle="bold"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -35,13 +36,13 @@
                     android:id="@+id/txtComentario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:padding="8dp"
                     android:layout_toRightOf="@id/img"
                     android:background="@drawable/curves"
                     android:layout_below="@+id/txtNombre"
-                    android:text="gracia al balbú"
+                    android:text="gracia al balbú k hoy tenemo la comida to la noche le reso al diarriba por dame la chaupa te amo jesus. *-*"
                     android:textColor="#656565"
                     android:textSize="16sp" />
 
