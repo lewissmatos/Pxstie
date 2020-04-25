@@ -108,6 +108,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                                    // Preferences.SaveUserData(CuentaActivity.this, " ", " ", " ", " ");
                                     startActivity(new Intent(DatosActivity.this, MainActivity.class));
                                     finish();
+
                                 }
                             }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                         @Override
