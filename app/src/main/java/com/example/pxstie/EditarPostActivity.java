@@ -46,8 +46,7 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
                 }).setNegativeButton("Descartar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(EditarPostActivity.this, MainActivity.class));
-                        finish();
+                        onBackPressed();
                     }
                 });
                 alertdialog.create();

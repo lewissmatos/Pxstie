@@ -163,26 +163,45 @@
             app:srcCompat="@drawable/estrella_normal">
 
         </ImageView>
-
         <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/like"
+            android:background="#DADADA"
+            />
+
+        <RelativeLayout
             android:id="@+id/lyComentar"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="56dp"
             android:background="#fff"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:padding="8dp"
-            android:layout_marginBottom="4dp"
+            android:padding="2dp"
+            android:layout_marginBottom="2dp"
             android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:background="#DADADA"
+                />
             <EditText
                 android:id="@+id/edComentario"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:inputType="text"
                 android:padding="6dp"
-                android:paddingEnd="4dp"
-                android:paddingStart="4dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentLeft="true"
+                android:paddingEnd="4dp"
                 android:textColor="#000"
                 android:textSize="16sp"
                 android:background="@drawable/curves"
@@ -191,19 +210,18 @@
 
             <ImageView
                 android:id="@+id/btnComentar"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="6dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
                 app:srcCompat="@drawable/enviar"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="10dp"
-                android:layout_toRightOf="@id/edEscribir">
+                android:layout_toRightOf="@id/edComentario">
 
             </ImageView>
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_below="@+id/like"
+            android:layout_below="@+id/line2"
             android:layout_above="@+id/lyComentar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,7 +229,7 @@
             >
 
             <ScrollView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
