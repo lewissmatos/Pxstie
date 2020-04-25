@@ -43,7 +43,7 @@ import java.util.Map;
 
 public class PostCompletoActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView txtNom, txtCaption, txtFecha;
+    private TextView txtNom, txtCaption, txtFecha, idUsuario;
     private EditText edComentario;
     ImageView btnVolver, btnEliminar, btnEditar, like, btnComentar;
     boolean activo = false;
@@ -70,6 +70,8 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         btnVolver = findViewById(R.id.btnVolver);
         btnEliminar = findViewById(R.id.btnEliminar);
         btnEditar = findViewById(R.id.btnEditar);
+
+        idUsuario = findViewById(R.id.idUsuario);
 
         btnComentar = findViewById(R.id.btnComentar);
         edComentario = findViewById(R.id.edComentario);
