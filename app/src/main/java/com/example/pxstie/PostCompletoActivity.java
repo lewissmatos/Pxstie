@@ -86,7 +86,6 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         btnEditar.setOnClickListener(this);
         btnComentar.setOnClickListener(this);
 
-
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,7 +123,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                     .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            deletePost();
                         }
                     }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                         @Override
@@ -139,6 +138,38 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                 Comentar();
                 break;
         }
+    }
+
+    private void deletePost(){
+        dialog.setMessage("Eliminando post...");
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+        String url = "https://thejopipedia.000webhostapp.com/wsJSONDeletePost.php";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                dialog.dismiss();
+                startActivity(new Intent(PostCompletoActivity.this, ContenedorActivity.class));
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(PostCompletoActivity.this, "Ha ocurrido un error al eliminar el post", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                map.put("id", idPost);
+                return map;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
     private void getComentarios(){
@@ -255,8 +286,18 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                         txtCaption.setText(jsonObject.getString("caption"));
                         txtFecha.setText(jsonObject.getString("fecha"));
                         txtNom.setText(jsonObject.getString("nombre"));
+                        idUsuario.setText(jsonObject.getString("idUsuario"));
                     }
                     dialog.dismiss();
+
+                    if (user.getIdUsuario().equals(idUsuario.getText().toString())){
+                        btnEliminar.setVisibility(View.VISIBLE);
+                        btnEditar.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        btnEliminar.setVisibility(View.INVISIBLE);
+                        btnEditar.setVisibility(View.INVISIBLE);
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
