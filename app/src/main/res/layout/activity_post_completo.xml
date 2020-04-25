@@ -82,10 +82,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_below="@+id/txtNom"
+            android:layout_below="@+id/txtFecha"
             android:maxLength="50"
             android:text=""
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:textColor="#333333"
             android:textSize="16sp"
             />
@@ -94,9 +94,9 @@
             android:id="@+id/txtFecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtCaption"
+            android:layout_below="@+id/txtNom"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="4dp"
             android:text=""
             android:layout_marginBottom="10dp"
             android:textColor="#878787"
@@ -178,7 +178,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_below="@+id/txtFecha"
+            android:layout_below="@+id/like"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

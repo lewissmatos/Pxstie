@@ -139,7 +139,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
-                            Toast.makeText(getContext(), "se hizo el maldito post", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Publicado correctamente", Toast.LENGTH_SHORT).show();
                             edPost.setText("");
                             getPosts();
                             dialog.dismiss();
@@ -237,10 +237,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
 
     private ArrayList<Posts> getPostslList() {
         ArrayList<Posts> posts = new ArrayList<>();
-        posts.add(new Posts("Eiron Diaz", "mi primer post sfhdfjfdhffjdfhjdfjhdfdhfdhfjdjfhdjhfdfhdfhdfjhdfhdfhdjfjdfjdhin foto"));
-        posts.add(new Posts(R.drawable.yo, "Lewis Matos", "gracia papá dio otro día sin ser neybero"));
-        posts.add(new Posts("Lewis Matos", "gracia papá dio otro día sin ser neybero te amo jesucristo mua bebe hermoso chulo papasote"));
-        posts.add(new Posts(R.drawable.alofoke, "Santiago Matías", "donde ta topo??"));
+
         return posts;
     }
 }
