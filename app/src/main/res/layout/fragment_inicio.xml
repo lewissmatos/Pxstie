@@ -59,7 +59,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="46dp"
-            android:background="@drawable/bg_panel_post"
+            android:background="#fff"
             android:padding="6dp">
 
             <EditText
@@ -133,7 +133,7 @@
                         android:id="@+id/recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#D5D5D5">
+                        android:background="@color/white_smoke">
 
                     </androidx.recyclerview.widget.RecyclerView>
 

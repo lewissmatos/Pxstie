@@ -42,7 +42,7 @@ public class MensajesActivity extends AppCompatActivity implements View.OnClickL
     }
     private ArrayList<Mensajes> getMensasjeslList() {
         ArrayList<Mensajes> mensajes = new ArrayList<>();
-        mensajes.add(new Mensajes(R.drawable.yo, "Lewis Matos", "klk vamo a bebe romo?"));
+        mensajes.add(new Mensajes(R.drawable.perfil3, "Lewis Matos", "klk vamo a bebe romo?"));
         return mensajes;
     }
 }

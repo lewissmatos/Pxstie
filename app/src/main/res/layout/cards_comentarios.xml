@@ -26,7 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/img"
-                    android:text="Lewis Matos"
+                    android:text="La Mente Sicaria"
                     android:layout_marginStart="18dp"
                     android:textStyle="bold"
                     android:textColor="#000"

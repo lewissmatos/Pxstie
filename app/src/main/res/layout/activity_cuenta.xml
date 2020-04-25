@@ -34,7 +34,7 @@
                    android:id="@+id/imgUser"
                    android:layout_width="80dp"
                    android:layout_height="80dp"
-                   app:srcCompat="@drawable/usuarioicon" />
+                   app:srcCompat="@drawable/el_lidel" />
            </androidx.cardview.widget.CardView>
 
            <TextView

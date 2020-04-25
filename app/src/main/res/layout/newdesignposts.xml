@@ -33,7 +33,7 @@
                 android:id="@+id/txtNom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eiron Diaz"
+                android:text="La Mente Sicaria"
                 android:layout_below="@+id/img"
                 android:layout_toRightOf="@id/profile"
                 android:textStyle="bold"
