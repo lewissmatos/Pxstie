@@ -73,6 +73,7 @@
                 android:background="@drawable/fondo_blanco_edittext"
                 android:inputType="textMultiLine"
                 android:textSize="16sp"
+                android:gravity="top"
                 android:textColor="#000"
                 >
             </EditText>
