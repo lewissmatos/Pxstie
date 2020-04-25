@@ -167,6 +167,7 @@
         </ImageView>
 
         <LinearLayout
+            android:id="@+id/lyComentar"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:background="#fff"
@@ -205,6 +206,7 @@
 
         <LinearLayout
             android:layout_below="@+id/like"
+            android:layout_above="@+id/lyComentar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
