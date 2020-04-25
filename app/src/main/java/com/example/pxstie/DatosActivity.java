@@ -101,14 +101,13 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                     opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
                     opdialog.setMessage("Seguro que desea retroceder?")
                             .setIcon(R.drawable.advertencia)
-                            .setTitle(R.string.advertencia)
+                            .setTitle(R.string.advertencia) 
                             .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                    // Preferences.SaveUserData(CuentaActivity.this, " ", " ", " ", " ");
                                     startActivity(new Intent(DatosActivity.this, MainActivity.class));
                                     finish();
-
                                 }
                             }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                         @Override

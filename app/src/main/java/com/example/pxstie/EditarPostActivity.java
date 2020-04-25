@@ -11,11 +11,13 @@ import android.os.Message;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 public class EditarPostActivity extends AppCompatActivity implements View.OnClickListener{
     ImageView btnVolver, btnGuardar;
     AlertDialog.Builder alertdialog;
+    EditText edPostEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
 
         btnVolver = findViewById(R.id.btnVolver);
         btnGuardar = findViewById(R.id.btnGuardar);
+        edPostEdit = findViewById(R.id.edPostEdit);
 
         btnVolver.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);

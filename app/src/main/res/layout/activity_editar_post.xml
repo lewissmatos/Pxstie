@@ -58,6 +58,26 @@
                 />
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            >
+
+            <EditText
+                android:id="@+id/edPostEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_blanco_edittext"
+                android:inputType="textMultiLine"
+                android:textSize="16sp"
+                android:textColor="#000"
+                >
+            </EditText>
+        </LinearLayout>
+
 
     </LinearLayout>
 
