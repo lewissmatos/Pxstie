@@ -158,7 +158,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                         }
                         else
                             Usuario.Registrar(this, dialog, nombre, user, password, genero, edad);
-                            finish();
                     }
                 }
                 break;

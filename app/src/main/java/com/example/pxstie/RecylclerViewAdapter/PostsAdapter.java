@@ -53,6 +53,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         }
 
         holder.nombre.setText(posts.get(position).getNombre());
+        holder.fecha.setText(posts.get(position).getFecha());
         holder.idPost.setText(posts.get(position).getIdPost());
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +80,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image, like;
-        TextView nombre, caption;
+        TextView nombre, caption, fecha;
         LinearLayout parent;
         TextView idPost;
 
@@ -103,6 +104,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             like = itemView.findViewById(R.id.like);
             idPost = itemView.findViewById(R.id.idPost);
             parent = itemView.findViewById(R.id.parent);
+            fecha = itemView.findViewById(R.id.txtFecha);
         }
     }
 }

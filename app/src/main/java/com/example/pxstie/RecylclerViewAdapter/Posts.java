@@ -7,6 +7,7 @@ public class Posts {
     private int like;
     private String nombre;
     private String caption;
+    private String fecha;
     private String idPost;
 
     public Posts(int image, String nombre, String mensaje) {
@@ -19,6 +20,9 @@ public class Posts {
         this.image = 0;
         this.nombre = nombre;
         this.caption = mensaje;
+    }
+
+    public Posts() {
     }
 
     public int getImage() {
@@ -51,5 +55,13 @@ public class Posts {
 
     public void setIdPost(String idPost) {
         this.idPost = idPost;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 }

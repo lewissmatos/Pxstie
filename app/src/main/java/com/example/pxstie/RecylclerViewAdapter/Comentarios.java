@@ -13,6 +13,9 @@ public class Comentarios {
         this.comentario = comentario;
     }
 
+    public Comentarios() {
+    }
+
     public int getImage() {
         return image;
     }
