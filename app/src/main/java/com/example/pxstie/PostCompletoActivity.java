@@ -45,7 +45,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
 
     private TextView txtNom, txtCaption, txtFecha;
     private EditText edComentario;
-    ImageView btnVolver, btnEliminar, like, btnComentar;
+    ImageView btnVolver, btnEliminar, btnEditar, like, btnComentar;
     boolean activo = false;
     private String idPost;
     private ProgressDialog dialog;
@@ -69,6 +69,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
 
         btnVolver = findViewById(R.id.btnVolver);
         btnEliminar = findViewById(R.id.btnEliminar);
+        btnEditar = findViewById(R.id.btnEditar);
 
         btnComentar = findViewById(R.id.btnComentar);
         edComentario = findViewById(R.id.edComentario);
@@ -80,6 +81,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
 
         btnVolver.setOnClickListener(this);
         btnEliminar.setOnClickListener(this);
+        btnEditar.setOnClickListener(this);
         btnComentar.setOnClickListener(this);
 
 
@@ -108,6 +110,8 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()){
             case R.id.btnVolver:
                 onBackPressed();
+                break;
+            case R.id.btnEditar:
 
                 break;
             case R.id.btnEliminar:
@@ -154,7 +158,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                         JSONObject jsonObject = null;
                         jsonObject = json.getJSONObject(i);
 
-                        com.setImage(R.drawable.alofoke);
+                        com.setImage(R.drawable.el_lidel);
                         com.setComentario(jsonObject.getString("contenido"));
                         com.setNombre(jsonObject.getString("nombre"));
 

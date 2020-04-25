@@ -46,6 +46,7 @@ public class ContenedorActivity extends AppCompatActivity {
                                 }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+
                             }
                         });
                         opdialog.create();
