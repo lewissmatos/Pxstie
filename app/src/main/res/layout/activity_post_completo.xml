@@ -100,9 +100,7 @@
             android:layout_height="1dp"
             android:text=""
             android:textColor="#fff"
-            >
-
-        </TextView>
+            />
 
         <TextView
             android:id="@+id/txtCaption"
