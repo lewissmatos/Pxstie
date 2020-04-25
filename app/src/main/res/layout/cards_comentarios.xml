@@ -28,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/img"
                     android:text="La Mente Sicaria"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="20dp"
                     android:textStyle="bold"
                     android:textColor="#000"
                     android:textSize="16sp" />
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
-                    android:padding="8dp"
+                    android:padding="10dp"
                     android:layout_toRightOf="@id/img"
                     android:background="@drawable/curves"
                     android:layout_below="@+id/txtNombre"
