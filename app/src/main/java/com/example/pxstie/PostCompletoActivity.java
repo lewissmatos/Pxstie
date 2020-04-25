@@ -60,7 +60,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
             idPost = b.getString("id");
         }catch (Exception e){}
 
-        dialog = new ProgressDialog(this);
+        dialog = new ProgressDialog(this, R.style.DialogBasicCustomRose);
 
         user = Preferences.getUserData(this);
 
@@ -100,8 +100,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()){
             case R.id.btnVolver:
                 onBackPressed();
-                /*startActivity(new Intent(this, ContenedorActivity.class));
-                finish();*/
+
                 break;
             case R.id.btnComentar:
                 Comentar();

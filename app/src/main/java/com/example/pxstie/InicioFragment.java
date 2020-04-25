@@ -79,7 +79,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
         edPost.setEnabled(false);
         btnPostear.setEnabled(false);
 
-        dialog = new ProgressDialog(getContext());
+        dialog = new ProgressDialog(getContext(), R.style.DialogBasicCustomRose);
 
         btnAddPost.setOnClickListener(new View.OnClickListener() {
             @Override

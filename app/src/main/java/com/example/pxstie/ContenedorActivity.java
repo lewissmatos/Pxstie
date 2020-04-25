@@ -24,7 +24,7 @@ public class ContenedorActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new InicioFragment()).commit();
-        opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
+        opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navLiistener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,7 +35,6 @@ public class ContenedorActivity extends AppCompatActivity {
                     {
                         opdialog.setMessage("Seguro que desea cerrar sesión?")
                                 .setIcon(R.drawable.advertencia)
-                                .setTitle(R.string.advertencia)
                                 .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -46,6 +45,7 @@ public class ContenedorActivity extends AppCompatActivity {
                                 }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(getApplicationContext(), InicioFragment.class));
                             }
                         });
                         opdialog.create();

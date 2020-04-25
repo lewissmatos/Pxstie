@@ -28,7 +28,7 @@
                android:layout_centerHorizontal="true"
                android:layout_gravity="center_horizontal"
                android:layout_marginTop="10dp"
-               app:cardCornerRadius="30dp"
+               app:cardCornerRadius="40dp"
                >
                <ImageView
                    android:id="@+id/imgUser"
