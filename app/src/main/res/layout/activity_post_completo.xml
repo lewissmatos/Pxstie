@@ -37,7 +37,14 @@
                 android:textStyle="bold"
                 android:textColor="@color/light_texts_color"
                 android:textSize="26sp" />
-
+            <ImageView
+                android:id="@+id/btnEliminar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/eliminar" />
         </RelativeLayout>
     <RelativeLayout
         android:id="@+id/rltLayout"

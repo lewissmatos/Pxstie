@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,12 +45,13 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
 
     private TextView txtNom, txtCaption, txtFecha;
     private EditText edComentario;
-    ImageView btnVolver, like, btnComentar;
+    ImageView btnVolver, btnEliminar, like, btnComentar;
     boolean activo = false;
     private String idPost;
     private ProgressDialog dialog;
     private Usuario user;
     private RecyclerView recyclerView;
+    private AlertDialog.Builder alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,15 +68,20 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         user = Preferences.getUserData(this);
 
         btnVolver = findViewById(R.id.btnVolver);
-        like = findViewById(R.id.like);
-        btnVolver.setOnClickListener(this);
+        btnEliminar = findViewById(R.id.btnEliminar);
+
         btnComentar = findViewById(R.id.btnComentar);
-        btnComentar.setOnClickListener(this);
         edComentario = findViewById(R.id.edComentario);
+        like = findViewById(R.id.like);
 
         txtCaption = findViewById(R.id.txtCaption);
         txtNom = findViewById(R.id.txtNom);
         txtFecha = findViewById(R.id.txtFecha);
+
+        btnVolver.setOnClickListener(this);
+        btnEliminar.setOnClickListener(this);
+        btnComentar.setOnClickListener(this);
+
 
         like.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +108,25 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()){
             case R.id.btnVolver:
                 onBackPressed();
+
+                break;
+            case R.id.btnEliminar:
+                alertDialog  =new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
+                alertDialog.setMessage("Seguro que desea eliminar?")
+                        .setTitle(R.string.advertencia)
+                        .setIcon(R.drawable.eliminar_grande)
+                    .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+                alertDialog.create();
+                alertDialog.show();
 
                 break;
             case R.id.btnComentar:

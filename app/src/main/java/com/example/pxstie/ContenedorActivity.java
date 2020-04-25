@@ -34,6 +34,7 @@ public class ContenedorActivity extends AppCompatActivity {
                     if (menuItem.getItemId() == R.id.logOut)
                     {
                         opdialog.setMessage("Seguro que desea cerrar sesión?")
+                                .setTitle(R.string.advertencia)
                                 .setIcon(R.drawable.advertencia)
                                 .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                                     @Override
@@ -45,7 +46,6 @@ public class ContenedorActivity extends AppCompatActivity {
                                 }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                startActivity(new Intent(getApplicationContext(), InicioFragment.class));
                             }
                         });
                         opdialog.create();
