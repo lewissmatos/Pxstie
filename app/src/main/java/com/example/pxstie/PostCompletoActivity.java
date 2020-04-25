@@ -113,7 +113,11 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
                 onBackPressed();
                 break;
             case R.id.btnEditar:
-                startActivity(new Intent(this, EditarPostActivity.class));
+                Intent i = new Intent(this, EditarPostActivity.class);
+                Bundle b = new Bundle();
+                b.putString("id", idPost);
+                i.putExtras(b);
+                startActivity(i);
                 break;
             case R.id.btnEliminar:
                 alertDialog  =new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
