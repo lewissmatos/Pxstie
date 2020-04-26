@@ -44,32 +44,10 @@
     <string name="no_reg">No se pudo registrar</string>
     <string name="no_inic_sesion">No se pudo inciar sesión</string>
     <string name="no_estab_conex">No se pudo establecer sesión con el servidor</string>
-    //-------------------------------------------------
-    <string name="total_puntos">Total de puntos: </string>
-    <string name="total_partidas">Partidas jugadas: </string>
-    <string name="cantidad_partidas">0000</string>
-    <string name="cerrar_sesion">Cerrar sesión</string>
-    <string name="puntuacion">Mi puntuación</string>
-    <string name="apuntes">Apuntes</string>
-    <string name="mis_apuntes">Mis apuntes</string>
-    <string name="lo_aprendi">What i learned:</string>
-    //EXTRAS
-    <string name="temas">Temas</string>
-    <string name="puntuaciones">Puntuaciones</string>
-    <string name="cuenta">Cuenta</string>
-    <string name="buscar">Buscar</string>
-    <string name="toque_boton_iniciar">Toque el botón para iniciar</string>
-    <string name="volver">Volver</string>
-    <string name="comenzar">Comenzar</string>
-    <string name="desliza">Desliza hacia abajo para ver mas</string>
-    <string name="visualiza">Visializa las puntuaciones mas altas</string>
-    <string name="prox">¡PROXIMAMENTE!</string>
-    <string name="nuevo">Nuevo</string>
-
     //-------------------------------------------
     <string name="d_salir_s_guar">Desea salir sin guardar</string>
     <string name="guardado_correctamente">El apunte se ha guardado correctamente</string>
-    <string name="error">Ha ocurrido un error</string>
+    <string name="error">Error</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

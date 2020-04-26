@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    //LOGIN Y REGISTRO
+    <string name="serv_en_des">servicio en desarrollo</string>
+    <string name="email">Email</string>
+    <string name="email_hint">nombre@ejemplo.com</string>
+    <string name="contraseña_hint">Password</string>
+    <string name="contraseña">Password</string>
+    <string name="iniciar_sesion">"Log in"</string>
+    <string name="registrarse">Sign in</string>
+    <string name="no_cuenta">You dont have an account yet?</string>
+    <string name="tiene_cuenta">Already have an account?</string>
+    <string name="eslogan">Expande tu mente!</string>
+    <string name="agregar_usuario">Add user</string>
+    <string name="nom_apell">Complete name:</string>
+    <string name="re_contraseña">Repeat your password:</string>
+    <string name="nom_apell_hint">Write your details…</string>
+    <string name="re_contraseña_hint">Repeat your password:</string>
+    <string name="cancelar">Cancel</string>
+
+    //PERFIL STRINGS
+    <string name="desea_cerrar">¿Desea cerrar seisón?</string>
+    <string name="advertencia">¡WARNING!</string>
+    <string name="aceptar_sesion">ACCEPT</string>
+    <string name="cancelar_sesion">CANCEL</string>
+    <string name="llenar_campos">Debes llenar todos campos</string>
+    <string name="corr_pass_invalido">Invalid email or password</string>
+    <string name="contr_6_car">The password must be more than 6 digits</string>
+    <string name="contr_no_coin">Passwords dont match</string>
+    <string name="usuario_agr_corr">User added successfully</string>
+    <string name="corr_exist">This email already exist</string>
+    <string name="no_reg">could not register</string>
+    <string name="no_inic_sesion">Could not log in</string>
+    <string name="no_estab_conex">Could not connect to server</string>
+    <string name="d_salir_s_guar">Desea salir sin guardar</string>
+    <string name="guardado_correctamente">Saved successfully</string>
+</resources>

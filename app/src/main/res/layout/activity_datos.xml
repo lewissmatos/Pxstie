@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/registrarse"
-                    android:textColor="#fff"
+                    android:textColor="@color/blanco"
                     android:textStyle="bold"
                     android:textSize="34sp"
                     android:gravity="center"/>
@@ -45,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:backgroundTint="@color/white_smoke"
             android:background="@drawable/bg_curverightsuperior"
             android:gravity="center_horizontal"
             >
@@ -54,6 +55,7 @@
                 android:layout_height="460dp"
                 android:layout_marginTop="20dp"
                 app:cardElevation="3dp"
+                android:backgroundTint="@color/blanco"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp"
                 >
@@ -185,7 +187,7 @@
                             android:backgroundTint="@color/azul"
                             android:text="Registrarse"
                             android:layout_marginTop="16dp"
-                            android:textColor="#fff"
+                            android:textColor="@color/blanco"
                             android:textSize="16sp" />
 
                 </LinearLayout>

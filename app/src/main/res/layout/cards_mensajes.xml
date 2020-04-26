@@ -14,45 +14,40 @@
         android:layout_height="match_parent"
         android:padding="14dp"
         android:paddingEnd="30dp"
-        android:background="@color/light_texts_color">
+        android:background="@color/blanco">
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:srcCompat="@drawable/perfil3" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="28dp"
+            >
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:srcCompat="@drawable/el_lidel" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img"
+            android:layout_toRightOf="@id/profile"
             android:text="La Mente Sicaria"
-            android:layout_marginStart="20dp"
             android:textStyle="bold"
-            android:textColor="#000"
+            android:textColor="@color/negro"
             android:textSize="18sp" />
-
-        <LinearLayout
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_toRightOf="@id/img"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="6dp"
-            android:orientation="vertical"
-            android:layout_below="@id/txtNombre"
-            android:background="#DADADA"
-            />
 
         <TextView
             android:id="@+id/txtMensaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="6dp"
-            android:layout_toRightOf="@id/img"
-            android:layout_below="@+id/line"
+            android:layout_toRightOf="@id/profile"
+            android:layout_below="@+id/txtNombre"
             android:text="klk vamo a bebe romo?"
             android:textColor="#656565"
             android:textSize="16sp" />

@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pxstie"
-                    android:textColor="#fff"
+                    android:textColor="@color/blanco"
                     android:textStyle="bold"
                     android:textSize="60sp"
                     android:gravity="center"/>
@@ -44,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:backgroundTint="@color/white_smoke"
             android:background="@drawable/bg_curverightsuperior"
             android:gravity="center_horizontal"
             >
@@ -53,6 +54,7 @@
                 android:layout_height="280dp"
                 android:layout_marginTop="70dp"
                 app:cardElevation="3dp"
+                android:backgroundTint="@color/blanco"
                 android:layout_gravity="center"
                 app:cardCornerRadius="30dp"
                 >
@@ -115,7 +117,7 @@
                     android:backgroundTint="@color/rose"
                     android:background="@drawable/button_rouned"
                     android:text="@string/iniciar_sesion"
-                    android:textColor="#fff" />
+                    android:textColor="@color/blanco" />
 
             </LinearLayout>
 

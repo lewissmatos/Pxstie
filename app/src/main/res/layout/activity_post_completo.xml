@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff"
+        android:background="@color/blanco"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -35,7 +35,7 @@
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
-                android:textColor="@color/light_texts_color"
+                android:textColor="@color/blanco"
                 android:textSize="26sp" />
             <ImageView
                 android:id="@+id/btnEditar"
@@ -60,7 +60,7 @@
         android:id="@+id/rltLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_texts_color">
+        android:background="@color/blanco">
 
         <ImageView
             android:id="@+id/img"
@@ -99,7 +99,7 @@
             android:layout_width="1dp"
             android:layout_height="1dp"
             android:text=""
-            android:textColor="#fff"
+            android:textColor="@color/blanco"
             />
 
         <TextView
@@ -177,7 +177,7 @@
             android:id="@+id/lyComentar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="#fff"
+            android:background="@color/blanco"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:padding="2dp"
@@ -202,7 +202,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_alignParentLeft="true"
                 android:paddingEnd="4dp"
-                android:textColor="#000"
+                android:textColor="@color/negro"
                 android:textSize="16sp"
                 android:background="@drawable/curves"
                 >

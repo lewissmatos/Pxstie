@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="14dp"
-            android:background="@color/light_texts_color">
+            android:background="@color/blanco">
 
             <ImageView
                 android:id="@+id/img"
@@ -45,7 +45,7 @@
                 android:layout_below="@+id/img"
                 android:layout_toRightOf="@id/profile"
                 android:textStyle="bold"
-                android:textColor="#000"
+                android:textColor="@color/negro"
                 android:textSize="18sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ver más"
-                android:textColor="#000"
+                android:textColor="@color/negro"
                 android:textStyle="bold"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="16dp"
@@ -126,7 +126,7 @@
                 android:id="@+id/idPost"
                 android:layout_width="wrap_content"
                 android:textSize="1sp"
-                android:textColor="#fff"
+                android:textColor="@color/blanco"
                 android:layout_height="wrap_content">
 
             </TextView>
