@@ -130,6 +130,14 @@
                 android:layout_height="wrap_content">
 
             </TextView>
+            <TextView
+                android:id="@+id/idUsuario"
+                android:layout_width="wrap_content"
+                android:textSize="1sp"
+                android:textColor="@color/blanco"
+                android:layout_height="wrap_content">
+
+            </TextView>
 
         </RelativeLayout>
 

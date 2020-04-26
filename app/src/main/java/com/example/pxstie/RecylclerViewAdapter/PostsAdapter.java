@@ -84,7 +84,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         ImageView image, like;
         TextView nombre, caption, fecha;
         LinearLayout parent;
-        TextView idPost;
+        TextView idPost, idUsuario;
 
         public ViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -100,11 +100,23 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     itemView.setActivated(true);
                 }
             });
+            nombre.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, CuentaActivity.class);
+                    Bundle b = new Bundle();
+                    b.putString("id", idUsuario.getText().toString());
+                    i.putExtras(b);
+                    context.startActivity(i);
+                    itemView.setActivated(true);
+                }
+            });
             image = itemView.findViewById(R.id.img);
             nombre = itemView.findViewById(R.id.txtNom);
             caption = itemView.findViewById(R.id.txtCaption);
             like = itemView.findViewById(R.id.like);
             idPost = itemView.findViewById(R.id.idPost);
+            idUsuario = itemView.findViewById(R.id.idUsuario);
             parent = itemView.findViewById(R.id.parent);
             fecha = itemView.findViewById(R.id.txtFecha);
         }

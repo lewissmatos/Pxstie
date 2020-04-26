@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -46,6 +47,7 @@ public class InicioFragment extends Fragment implements View.OnClickListener {
 
     ImageView btnMensajes, btnCuenta, btnAddPic, btnPostear, btnAddPost;
     RecyclerView recyclerView;
+
     EditText edPost;
     private Usuario user;
     boolean activo=false;
