@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String user, password;
     private ProgressDialog dialog;
     private Usuario userr;
-
+    private Window window;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnReg.setOnClickListener(this);
         btnIniSes.setOnClickListener(this);
+
+        dialog = new ProgressDialog(this);
+
+        String colorbarra = "#F8F8F8";
+
+        this.window = getWindow();
+        //barcolor
+        window.setStatusBarColor(Color.parseColor(colorbarra));
 
         dialog = new ProgressDialog(this);
     }

@@ -38,7 +38,6 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
     EditText edPostEdit;
     private String idPost;
     private ProgressDialog dialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +58,9 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
         alertdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
         dialog = new ProgressDialog(this, R.style.DialogBasicCustomRose);
         getPostById();
+
+
+        dialog = new ProgressDialog(this);
     }
 
     @Override
@@ -100,9 +102,9 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void getPostById(){
-        dialog.setMessage("Cargando...");
+       /* dialog.setMessage("Cargando...");
         dialog.setCanceledOnTouchOutside(false);
-        dialog.show();
+        dialog.show();*/
 
         String url = "https://thejopipedia.000webhostapp.com/wsJSONGetPostById.php?id=" + idPost;
 

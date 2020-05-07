@@ -36,7 +36,7 @@ public class MasInfoActivity extends AppCompatActivity implements View.OnClickLi
         txtFecha.setText(user.getFecha());
         txtGenero.setText(user.getGenero());
 
-        String colorbarra = "#0B7EC5";
+        String colorbarra = "#F8F8F8";
 
         this.window = getWindow();
         //barcolor

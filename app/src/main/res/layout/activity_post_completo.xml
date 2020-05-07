@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/rose"
+            android:background="@color/blanco"
             >
 
             <ImageView
@@ -25,6 +25,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
+                android:tint="@color/negro"
                 app:srcCompat="@drawable/anterior" />
             <TextView
                 android:id="@+id/txtTitulo"
@@ -35,7 +36,7 @@
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
-                android:textColor="@color/blanco"
+                android:textColor="@color/negro"
                 android:textSize="26sp" />
             <ImageView
                 android:id="@+id/btnEditar"
@@ -45,6 +46,7 @@
                 android:layout_toLeftOf="@id/btnEliminar"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="10dp"
+                android:tint="@color/negro"
                 app:srcCompat="@drawable/editar" />
             <ImageView
                 android:id="@+id/btnEliminar"
@@ -52,6 +54,7 @@
                 android:layout_height="28dp"
                 android:visibility="invisible"
                 android:layout_alignParentRight="true"
+                android:tint="@color/negro"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="10dp"
                 app:srcCompat="@drawable/eliminar" />

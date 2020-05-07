@@ -26,6 +26,7 @@
                 android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:tint="@color/negro"
                 android:layout_marginStart="10dp"
                 app:srcCompat="@drawable/close" />
             <TextView
@@ -33,11 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Editar post"
+                android:text="Editar"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_centerInParent="true"
-                android:textColor="@color/rose"
+                android:textColor="@color/negro"
                 android:textSize="22sp" />
 
             <ImageView
@@ -46,6 +47,7 @@
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:tint="@color/negro"
                 android:layout_marginEnd="10dp"
                 app:srcCompat="@drawable/listo" />
             <LinearLayout

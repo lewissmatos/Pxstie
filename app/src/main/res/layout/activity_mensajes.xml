@@ -17,7 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/rose"
+            android:background="@color/blanco"
             >
 
             <ImageView
@@ -26,6 +26,7 @@
                 android:layout_height="40dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:tint="@color/negro"
                 android:layout_marginStart="10dp"
                 app:srcCompat="@drawable/anterior" />
             <TextView
@@ -37,7 +38,7 @@
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
-                android:textColor="@color/blanco"
+                android:textColor="@color/negro"
                 android:textSize="26sp" />
 
         </RelativeLayout>

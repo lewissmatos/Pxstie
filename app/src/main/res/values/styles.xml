@@ -1,11 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/rose</item>
-        <item name="colorPrimaryDark">@color/rose</item>
+        <item name="colorPrimaryDark">@color/blanco</item>
         <item name="colorAccent">@color/rose</item>
-
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
 
  <style name="DialogBasicCustomRose" parent="Theme.AppCompat.Light.Dialog.Alert">

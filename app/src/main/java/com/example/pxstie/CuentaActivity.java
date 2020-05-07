@@ -13,9 +13,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CuentaActivity extends AppCompatActivity implements View.OnClickListener{
-    Window window;
-    Button btnCerrarSesion;
+public class CuentaActivity extends AppCompatActivity implements View.OnClickListener {
+
     TextView btnVolver,txtMasInfo;
     AlertDialog.Builder opdialog;
     private Usuario user;
@@ -33,10 +32,6 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
 
         btnVolver.setOnClickListener(this);
         txtMasInfo.setOnClickListener(this);
-
-        String colorbarra = "#0B7EC5";
-        this.window = getWindow();
-        window.setStatusBarColor(Color.parseColor(colorbarra));
 
         user = Preferences.getUserData(this);
 

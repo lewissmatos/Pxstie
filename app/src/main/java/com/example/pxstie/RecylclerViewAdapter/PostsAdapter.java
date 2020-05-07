@@ -100,7 +100,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     itemView.setActivated(true);
                 }
             });
-            nombre.setOnClickListener(new View.OnClickListener() {
+            /*nombre.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(context, CuentaActivity.class);
@@ -110,7 +110,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     context.startActivity(i);
                     itemView.setActivated(true);
                 }
-            });
+            });*/
             image = itemView.findViewById(R.id.img);
             nombre = itemView.findViewById(R.id.txtNom);
             caption = itemView.findViewById(R.id.txtCaption);

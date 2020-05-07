@@ -34,13 +34,10 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
     AlertDialog.Builder opdialog;
     private String[] generos = new String[]{"GÉNERO", "Masculino", "Femenino", "Especificar"};
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
-
-
 
         iniSes = findViewById(R.id.iniSes);
         btnReg = findViewById(R.id.btnReg);
@@ -77,7 +74,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        String colorbarra = "#0B7EC5";
+        String colorbarra = "#F8F8F8";
 
         this.window = getWindow();
         //barcolor
@@ -94,8 +91,6 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 password=edPass.getText().toString();
                 nombre=edNom.getText().toString();
                 rpassword=edRPass.getText().toString();
-
-
                 if (!user.isEmpty()||!password.isEmpty()||!nombre.isEmpty()||!rpassword.isEmpty())
                 {
                     opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);

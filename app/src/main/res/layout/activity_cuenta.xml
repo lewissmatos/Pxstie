@@ -46,7 +46,7 @@
                android:layout_marginStart="14dp"
                android:text="VOLVER"
                android:textStyle="bold"
-               android:textColor="@color/azul"
+               android:textColor="@color/negro"
                android:textSize="12sp" />
 
        </RelativeLayout>

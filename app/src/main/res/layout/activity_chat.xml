@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:background="@drawable/porfavor1"
         android:orientation="vertical"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/rose"
             >
 
             <ImageView
@@ -26,6 +26,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
+                android:tint="@color/negro"
                 app:srcCompat="@drawable/anterior" />
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -48,7 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@drawable/porfavor1"
             android:gravity="center_horizontal">
             <LinearLayout
                 android:layout_width="match_parent"
