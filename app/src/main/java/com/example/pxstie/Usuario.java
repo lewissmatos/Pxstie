@@ -74,7 +74,7 @@ public class Usuario{
                         Preferences.SaveUserData(context, user.getIdUsuario(), user.getNombre(), user.getCorreo(), user.getContraseña(), user.getGenero(), user.getFecha());
                     }
                     dialog.dismiss();
-                    context.startActivity(new Intent(context, ContenedorActivity.class));
+                    context.startActivity(new Intent(context, HomeScreenActivity.class));
 
                 } catch (JSONException e) {
                     e.printStackTrace();

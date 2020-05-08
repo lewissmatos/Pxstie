@@ -55,7 +55,7 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
         btnVolver.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
 
-        alertdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
+        alertdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomBlack);
         dialog = new ProgressDialog(this, R.style.DialogBasicCustomRose);
         getPostById();
 

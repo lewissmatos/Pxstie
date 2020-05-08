@@ -155,7 +155,7 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onResponse(String response) {
                 dialog.dismiss();
-                startActivity(new Intent(PostCompletoActivity.this, ContenedorActivity.class));
+                startActivity(new Intent(PostCompletoActivity.this, HomeScreenActivity.class));
             }
         }, new Response.ErrorListener() {
             @Override

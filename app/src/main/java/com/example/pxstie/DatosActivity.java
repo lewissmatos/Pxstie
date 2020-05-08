@@ -93,7 +93,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 rpassword=edRPass.getText().toString();
                 if (!user.isEmpty()||!password.isEmpty()||!nombre.isEmpty()||!rpassword.isEmpty())
                 {
-                    opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomAzul);
+                    opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomBlack);
                     opdialog.setMessage("Seguro que desea retroceder?")
                             .setIcon(R.drawable.advertencia)
                             .setTitle(R.string.advertencia) 
@@ -118,7 +118,7 @@ public class DatosActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnReg:
-                dialog = new ProgressDialog(this, R.style.DialogBasicCustomAzul);
+                dialog = new ProgressDialog(this, R.style.DialogBasicCustomRose);
                 dialog.setMessage("Registrando...");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();

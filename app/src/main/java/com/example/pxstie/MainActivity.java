@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         userr = Preferences.getUserData(this);
         if (!userr.getNombre().equalsIgnoreCase("")){
-            startActivity(new Intent(this, ContenedorActivity.class));
+            startActivity(new Intent(this, HomeScreenActivity.class));
             finish();
         }
 
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     Preferences.SaveUserData(MainActivity.this, user.getIdUsuario(), user.getNombre(), user.getCorreo(), user.getContraseña(), user.getGenero(), user.getFecha());
                                 }
                                 dialog.dismiss();
-                                startActivity(new Intent(MainActivity.this, ContenedorActivity.class));
+                                startActivity(new Intent(MainActivity.this, HomeScreenActivity.class));
                                 finish();
 
                             } catch (JSONException e) {

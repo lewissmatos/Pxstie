@@ -24,7 +24,7 @@ public class ContenedorActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new InicioFragment()).commit();
-        opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomRose);
+        opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomBlack);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navLiistener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -57,9 +57,9 @@ public class ContenedorActivity extends AppCompatActivity {
                         case R.id.inicio:
                             selectedFragment = new InicioFragment();
                             break;
-                        case R.id.notificaciones:
+                        /*case R.id.notificaciones:
                             selectedFragment = new NotificacionesFragment();
-                            break;
+                            break;*/
 
                     }if (menuItem.getItemId() != R.id.logOut) {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

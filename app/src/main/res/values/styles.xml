@@ -12,6 +12,10 @@
         <item name="colorAccent">@color/rose</item>
  </style>
 
+    <style name="DialogBasicCustomBlack" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/negro</item>
+    </style>
+
  <style name="DialogBasicCustomAzul" parent="Theme.AppCompat.Light.Dialog.Alert">
      <item name="colorAccent">@color/azul</item>
  </style>
