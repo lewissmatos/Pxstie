@@ -88,7 +88,6 @@ public class EditarPostActivity extends AppCompatActivity implements View.OnClic
                 dialog.setMessage("Guardando...");
                 dialog.setCanceledOnTouchOutside(false);
                 dialog.show();
-
                 String edPE = edPostEdit.getText().toString();
                 if (edPE.isEmpty()){
                     Toast.makeText(this, "No puedes dejar el texto vacío", Toast.LENGTH_SHORT).show();

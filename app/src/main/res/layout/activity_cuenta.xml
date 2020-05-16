@@ -30,24 +30,26 @@
                android:layout_marginTop="10dp"
                app:cardCornerRadius="40dp"
                >
+
                <ImageView
                    android:id="@+id/imgUser"
                    android:layout_width="80dp"
                    android:layout_height="80dp"
-                   app:srcCompat="@drawable/el_lidel" />
+                   android:tint="@color/negro"
+                   app:srcCompat="@drawable/nombre" />
            </androidx.cardview.widget.CardView>
 
-           <TextView
+           <ImageView
                android:id="@+id/btnVolver"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
                android:layout_alignParentLeft="true"
-               android:layout_marginTop="16dp"
-               android:layout_marginStart="14dp"
-               android:text="VOLVER"
-               android:textStyle="bold"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="7dp"
                android:textColor="@color/negro"
-               android:textSize="12sp" />
+               android:textSize="12sp"
+               android:textStyle="bold"
+               app:srcCompat="@drawable/anterior_black" />
 
        </RelativeLayout>
     <LinearLayout

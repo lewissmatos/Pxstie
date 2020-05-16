@@ -14,51 +14,137 @@
         android:orientation="vertical"
         >
         <RelativeLayout
+            android:id="@+id/principalRL"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/bg_panel_post"
-            android:backgroundTint="@color/blanco"
+            android:layout_height="50dp"
             >
+
             <ImageView
-                android:id="@+id/btnCuenta"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="8dp"
-                android:tint="@color/rose"
-                android:layout_marginStart="20dp"
-                app:srcCompat="@drawable/cuentanew" />
-            <ImageView
-                android:id="@+id/btnLogOut"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_toLeftOf="@id/btnMensajes"
+                android:id="@+id/btnAddPost"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="10dp"
-                android:tint="@color/rose"
-                app:srcCompat="@drawable/log_out" />
+                android:padding="2dp"
+                android:background="@drawable/round"
+                android:layout_toLeftOf="@id/btnMensajes"
+                app:srcCompat="@drawable/addpost">
+            </ImageView>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/btnCuenta"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toLeftOf="@id/btnMensajes"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round"
+                android:padding="2dp"
+                android:tint="@color/negro"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/cuentanew" />
+
             <ImageView
                 android:id="@+id/btnMensajes"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_alignParentRight="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toLeftOf="@id/btnConfig"
                 android:layout_marginTop="8dp"
-                android:tint="@color/rose"
-                android:layout_marginEnd="20dp"
+                android:background="@drawable/round"
+                android:padding="4dp"
+                android:layout_marginEnd="10dp"
+                android:tint="@color/negro"
                 app:srcCompat="@drawable/mensajes" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/btnLogOut"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:tint="@color/negro"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/log_out" />
+
+            <ImageView
+                android:id="@+id/btnConfig"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:tint="@color/negro"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/config" />
+
             <TextView
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="4dp"
                 android:text="Pxstie"
+                android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/rose"
-                android:textSize="26sp" />
+                android:textSize="34sp" />
+
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutAddPost"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:padding="6dp">
+
+            <EditText
+                android:id="@+id/edPost"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:inputType="text"
+                android:layout_toLeftOf="@id/btnPostear"
+                android:layout_marginEnd="6dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/negro"
+                android:maxLength="160"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp"
+                android:background="@drawable/curves"
+                >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/btnPostear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/postear">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:orientation="vertical"
+            android:background="#DADADA"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,70 +153,6 @@
             android:orientation="vertical"
             >
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:background="#fff"
-                android:padding="6dp">
-
-                <EditText
-                    android:id="@+id/edPost"
-                    android:layout_width="260dp"
-                    android:layout_height="34dp"
-                    android:inputType="text"
-                    android:padding="6dp"
-                    android:layout_alignParentLeft="true"
-                    android:paddingEnd="10dp"
-                    android:paddingStart="10dp"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@color/negro"
-                    android:maxLength="90"
-                    android:layout_marginTop="2dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/curves"
-                    >
-                </EditText>
-                <ImageView
-                    android:id="@+id/btnAddPic"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    app:srcCompat="@drawable/add_photo">
-                </ImageView>
-                <ImageView
-                    android:id="@+id/btnAddPost"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_toLeftOf="@id/btnAddPic"
-                    app:srcCompat="@drawable/addpost">
-                </ImageView>
-                <ImageView
-                    android:id="@+id/btnPostear"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_toLeftOf="@id/btnAddPost"
-                    app:srcCompat="@drawable/postear">
-
-                </ImageView>
-
-
-            </RelativeLayout>
-            <LinearLayout
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:orientation="vertical"
-                android:layout_below="@id/txtNombre"
-                android:background="#DADADA"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,6 +182,7 @@
                 </ScrollView>
 
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

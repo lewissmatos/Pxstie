@@ -6,10 +6,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog dialog;
     private Usuario userr;
     private Window window;
+    private ImageView mostrarPass;
+    private Boolean activo=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,12 +51,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnReg = findViewById(R.id.btnReg);
         btnIniSes = findViewById(R.id.btnIniSes);
+        mostrarPass = findViewById(R.id.mostrarPass);
 
         edUser = findViewById(R.id.edUser);
         edPass = findViewById(R.id.edPass);
 
         btnReg.setOnClickListener(this);
         btnIniSes.setOnClickListener(this);
+
+       /* mostrarPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!activo){
+                    mostrarPass.setImageResource(R.drawable.mostrar_activo);
+                    edPass.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    activo = true;
+                }
+                else{
+                    edPass.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    mostrarPass.setImageResource(R.drawable.mostrar);
+                    activo = false;
+                }
+            }
+        });*/
 
         dialog = new ProgressDialog(this);
 

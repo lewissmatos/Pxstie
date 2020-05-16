@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="@drawable/porfavor1"
+        android:background="@color/blanco"
         android:orientation="vertical"
         >
 
@@ -21,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/btnVolver"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
@@ -40,51 +40,54 @@
                     android:id="@+id/imgUser"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:srcCompat="@drawable/yo" />
+                    android:tint="@color/negro"
+                    app:srcCompat="@drawable/nombre" />
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
         <RelativeLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-            <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
                 android:background="@color/blanco"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp"
-                android:layout_alignParentBottom="true">
+                android:padding="8dp">
+
                 <EditText
                     android:id="@+id/edEscribir"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/imgSend"
+                    android:background="@drawable/curves"
                     android:inputType="text"
                     android:padding="6dp"
-                    android:paddingEnd="4dp"
-                    android:paddingStart="4dp"
-                    android:layout_marginStart="20dp"
+                    android:paddingLeft="4sp"
+                    android:paddingRight="4sp"
                     android:textColor="@color/negro"
-                    android:textSize="16sp"
-                    android:background="@drawable/curves"
-                    >
-                </EditText>
+                    android:textSize="16sp"></EditText>
 
                 <ImageView
+                    android:id="@+id/imgSend"
+
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="6dp"
-                    app:srcCompat="@drawable/enviar"
-                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentRight="true"
                     android:layout_marginStart="10dp"
-                    android:layout_toRightOf="@id/edEscribir">
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    app:srcCompat="@drawable/enviar">
 
                 </ImageView>
-            </LinearLayout>
+            </RelativeLayout>
 
 
         </RelativeLayout>

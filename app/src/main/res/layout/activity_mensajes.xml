@@ -16,7 +16,7 @@
         >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@color/blanco"
             >
 
@@ -27,6 +27,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:tint="@color/negro"
+                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 app:srcCompat="@drawable/anterior" />
             <TextView
@@ -71,6 +72,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

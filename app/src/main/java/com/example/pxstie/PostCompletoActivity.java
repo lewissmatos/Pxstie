@@ -90,11 +90,11 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(View v) {
                 if (!activo){
-                    like.setImageResource(R.drawable.estrella_llena);
+                    like.setImageResource(R.drawable.fire_activo);
                     activo = true;
                 }
                 else {
-                    like.setImageResource(R.drawable.estrella_normal);
+                    like.setImageResource(R.drawable.fire);
                     activo = false;
                 }
             }
@@ -215,8 +215,8 @@ public class PostCompletoActivity extends AppCompatActivity implements View.OnCl
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(PostCompletoActivity.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
+               // Toast.makeText(PostCompletoActivity.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
+                //dialog.dismiss();
             }
         });
 

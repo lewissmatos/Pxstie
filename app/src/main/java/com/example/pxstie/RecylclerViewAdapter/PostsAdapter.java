@@ -53,7 +53,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         }*/
 
         holder.caption.setText(posts.get(position).getCaption());
-
         holder.nombre.setText(posts.get(position).getNombre());
         holder.fecha.setText(posts.get(position).getFecha());
         holder.idPost.setText(posts.get(position).getIdPost());
@@ -61,17 +60,15 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 if (!activo){
-                    holder.like.setImageResource(R.drawable.estrella_llena);
+                    holder.like.setImageResource(R.drawable.fire_activo);
                     activo = true;
                 }
                 else {
-                    holder.like.setImageResource(R.drawable.estrella_normal);
+                    holder.like.setImageResource(R.drawable.fire);
                     activo = false;
                 }
             }
         });
-
-
     }
 
 
@@ -100,17 +97,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     itemView.setActivated(true);
                 }
             });
-            /*nombre.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(context, CuentaActivity.class);
-                    Bundle b = new Bundle();
-                    b.putString("id", idUsuario.getText().toString());
-                    i.putExtras(b);
-                    context.startActivity(i);
-                    itemView.setActivated(true);
-                }
-            });*/
             image = itemView.findViewById(R.id.img);
             nombre = itemView.findViewById(R.id.txtNom);
             caption = itemView.findViewById(R.id.txtCaption);

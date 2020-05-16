@@ -59,11 +59,9 @@
                 app:cardCornerRadius="30dp"
                 >
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 >
 
@@ -71,8 +69,11 @@
                     android:id="@+id/encabezado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
                     android:text="@string/iniciar_sesion"
                     android:textStyle="bold"
+                    android:layout_marginTop="20dp"
                     android:textColor="@color/gris_tabla"
                     android:textSize="24sp" />
 
@@ -82,8 +83,9 @@
                     android:layout_height="44dp"
                     android:gravity="center"
                     android:background="@drawable/curves"
-                    android:drawablePadding="6dp"
-                    android:paddingEnd="30dp"
+                    android:drawablePadding="-20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/encabezado"
                     android:drawableLeft="@drawable/profile_icon"
                     android:hint="Usuario"
                     android:inputType="text"
@@ -99,27 +101,41 @@
                     android:gravity="center"
                     android:background="@drawable/curves"
                     android:ems="10"
-                    android:drawablePadding="6dp"
-                    android:paddingEnd="30dp"
+                    android:drawablePadding="-8dp"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/edUser"                    android:paddingEnd="30dp"
                     android:hint="@string/contraseña"
                     android:inputType="textPassword"
                     android:drawableLeft="@drawable/pass_icon"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="20dp"
                     android:padding="6dp"
                     android:textSize="16sp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/mostrarPass"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_below="@id/edPass"
+                    app:srcCompat="@drawable/mostrar" />
 
                 <Button
                     android:id="@+id/btnIniSes"
                     android:layout_width="260dp"
                     android:layout_height="50dp"
                     android:textSize="16sp"
-                    android:layout_marginTop="18dp"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/edPass"
+                    android:layout_marginTop="20dp"
                     android:backgroundTint="@color/rose"
                     android:background="@drawable/button_rouned"
                     android:text="@string/iniciar_sesion"
                     android:textColor="@color/blanco" />
 
-            </LinearLayout>
+            </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 

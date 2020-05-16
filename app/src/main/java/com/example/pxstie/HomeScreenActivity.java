@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,12 +36,13 @@ import java.util.Locale;
 
 public class HomeScreenActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView btnMensajes, btnCuenta, btnAddPic, btnPostear, btnAddPost, btnLogOut;
+    ImageView btnMensajes, btnCuenta, btnPostear, btnAddPost, btnLogOut, btnConfig;
     RecyclerView recyclerView;
     EditText edPost;
     private Usuario user;
     boolean activo=false;
     private ProgressDialog dialog;
+    RelativeLayout layoutAddPost;
     AlertDialog.Builder opdialog;
 
     @Override
@@ -51,11 +53,12 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         btnMensajes = findViewById(R.id.btnMensajes);
         btnCuenta = findViewById(R.id.btnCuenta);
         btnPostear = findViewById(R.id.btnPostear);
-        btnAddPic = findViewById(R.id.btnAddPic);
         btnAddPost = findViewById(R.id.btnAddPost);
         btnLogOut = findViewById(R.id.btnLogOut);
+        btnConfig = findViewById(R.id.btnConfig);
         edPost = findViewById(R.id.edPost);
 
+        layoutAddPost = findViewById(R.id.layoutAddPost);
         recyclerView = findViewById(R.id.recyclerView);
 
         user = Preferences.getUserData(this);
@@ -63,9 +66,9 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         btnMensajes.setOnClickListener(this);
         btnCuenta.setOnClickListener(this);
         btnPostear.setOnClickListener(this);
-        btnAddPic.setOnClickListener(this);
         btnAddPost.setOnClickListener(this);
         btnLogOut.setOnClickListener(this);
+        btnConfig.setOnClickListener(this);
 
         edPost.setVisibility(View.INVISIBLE);
         btnPostear.setVisibility(View.INVISIBLE);
@@ -80,6 +83,8 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
             public void onClick(View v) {
 
                 if (!activo){
+                    layoutAddPost.setVisibility(View.VISIBLE);
+                    layoutAddPost.setBackgroundColor(getResources().getColor(R.color.blanco));
                     btnAddPost.setImageResource(R.drawable.close);
                     activo = true;
                     edPost.setVisibility(View.VISIBLE);
@@ -88,6 +93,8 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
                     btnPostear.setEnabled(true);
                 }
                 else {
+                    layoutAddPost.setVisibility(View.GONE);
+                    layoutAddPost.setBackgroundColor(getResources().getColor(R.color.transparente));
                     btnAddPost.setImageResource(R.drawable.addpost);
                     activo = false;
                     edPost.setVisibility(View.INVISIBLE);
@@ -110,6 +117,24 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.btnCuenta:
                 startActivity(new Intent(this, CuentaActivity.class));
+                break;
+            case R.id.btnConfig:
+                opdialog.setMessage("¿Desea salir de esta pantalla?")
+                        .setTitle(R.string.advertencia)
+                        .setIcon(R.drawable.advertencia)
+                        .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(HomeScreenActivity.this, ConfiguracionActivity.class));
+                                finish();
+                            }
+                        }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                opdialog.create();
+                opdialog.show();
                 break;
             case R.id.btnLogOut:
                 opdialog.setMessage("Seguro que desea cerrar sesión?")
@@ -167,6 +192,15 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
 
                     RequestQueue requestQueue = Volley.newRequestQueue(this);
                     requestQueue.add(jsonObjectRequest);
+
+                    layoutAddPost.setVisibility(View.GONE);
+                    layoutAddPost.setBackgroundColor(getResources().getColor(R.color.transparente));
+                    btnAddPost.setImageResource(R.drawable.addpost);
+                    activo = false;
+                    edPost.setVisibility(View.INVISIBLE);
+                    btnPostear.setVisibility(View.INVISIBLE);
+                    edPost.setEnabled(false);
+                    btnPostear.setEnabled(false);
                 }
                 break;
         }

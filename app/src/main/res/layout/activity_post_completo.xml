@@ -13,53 +13,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/blanco"
-            >
-
-            <ImageView
-                android:id="@+id/btnVolver"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:tint="@color/negro"
-                app:srcCompat="@drawable/anterior" />
-            <TextView
-                android:id="@+id/txtTitulo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Post"
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                android:textStyle="bold"
-                android:textColor="@color/negro"
-                android:textSize="26sp" />
-            <ImageView
-                android:id="@+id/btnEditar"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:visibility="invisible"
-                android:layout_toLeftOf="@id/btnEliminar"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="10dp"
-                android:tint="@color/negro"
-                app:srcCompat="@drawable/editar" />
-            <ImageView
-                android:id="@+id/btnEliminar"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:visibility="invisible"
-                android:layout_alignParentRight="true"
-                android:tint="@color/negro"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="10dp"
-                app:srcCompat="@drawable/eliminar" />
-        </RelativeLayout>
-    <RelativeLayout
         android:id="@+id/rltLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,30 +25,66 @@
             app:srcCompat="@drawable/yo"
             android:visibility="gone"/>
 
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentTop="true"
+            android:tint="@color/negro"
+            app:srcCompat="@drawable/anterior" />
+
+        <ImageView
+            android:id="@+id/btnEditar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@id/btnEliminar"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:tint="@color/negro"
+            app:srcCompat="@drawable/editar" />
+        <ImageView
+            android:id="@+id/btnEliminar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:tint="@color/negro"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/eliminar" />
 
         <TextView
             android:id="@+id/txtNom"
             android:layout_below="@+id/img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="22dp"
             android:layout_marginTop="8dp"
-            android:text=""
+            android:text="Lewis Matos"
+            android:layout_toRightOf="@id/btnVolver"
             android:textStyle="bold"
             android:textColor="#000"
             android:textSize="20sp" />
 
-        <TextView
+            <TextView
             android:id="@+id/punto"
-            android:layout_below="@+id/img"
+            android:layout_below="@+id/txtNom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/txtNom"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_toRightOf="@id/txtFecha"
+            android:layout_marginTop="2dp"
             android:text="•"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/idUsuario"
@@ -109,12 +98,13 @@
             android:id="@+id/txtCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_below="@+id/txtFecha"
-            android:text=""
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_below="@+id/txtLikes"
+            android:text="agradecido con el de arriba por no seer neybero"
+            android:layout_marginTop="10dp"
             android:textColor="#333333"
-            android:textSize="16sp"
+            android:textSize="18sp"
             />
 
         <TextView
@@ -122,10 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtNom"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="58dp"
             android:layout_marginTop="4dp"
-            android:text=""
-            android:layout_marginBottom="10dp"
+            android:text="27/25/2000"
             android:textColor="#878787"
             android:textSize="12sp" />
 
@@ -133,38 +122,36 @@
             android:id="@+id/txtLikes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/estrella"
-            android:layout_below="@+id/img"
+            android:layout_below="@+id/txtNom"
             android:layout_marginStart="2dp"
             android:inputType="number"
             android:text="00"
-            android:layout_marginEnd="14dp"
             android:textStyle="bold"
             android:textColor="@color/rose"
-            android:textSize="16sp" />
+            android:textSize="13sp" />
 
         <ImageView
             android:id="@+id/estrella"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/txtNom"
             android:layout_toRightOf="@id/punto"
-            android:layout_below="@+id/img"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/estrella_llena">
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/fire_activo">
         </ImageView>
 
         <ImageView
             android:id="@+id/like"
             android:layout_width="34dp"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:layout_below="@+id/txtCaption"
             android:layout_marginTop="4dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="14dp"
-            app:srcCompat="@drawable/estrella_normal">
-
+            app:srcCompat="@drawable/fire">
         </ImageView>
         <LinearLayout
             android:id="@+id/line2"
@@ -197,14 +184,15 @@
                 />
             <EditText
                 android:id="@+id/edComentario"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:inputType="text"
                 android:padding="6dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
+                android:paddingEnd="10dp"
                 android:layout_alignParentLeft="true"
-                android:paddingEnd="4dp"
+                android:layout_toLeftOf="@id/btnComentar"
                 android:textColor="@color/negro"
                 android:textSize="16sp"
                 android:background="@drawable/curves"
@@ -215,12 +203,12 @@
                 android:id="@+id/btnComentar"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="12dp"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="12dp"
                 app:srcCompat="@drawable/enviar"
-                android:layout_alignParentRight="true"
                 >
-
             </ImageView>
         </RelativeLayout>
 

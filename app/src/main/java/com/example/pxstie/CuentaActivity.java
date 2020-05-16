@@ -11,13 +11,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CuentaActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView btnVolver,txtMasInfo;
+    TextView txtMasInfo;
     AlertDialog.Builder opdialog;
     private Usuario user;
+    ImageView btnVolver;
     private TextView txtNom, txtUser;
 
     @Override
@@ -25,13 +27,14 @@ public class CuentaActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuenta);
 
-        btnVolver = findViewById(R.id.btnVolver);
         txtMasInfo = findViewById(R.id.txtMasInfo);
         txtNom = findViewById(R.id.txtNom);
         txtUser = findViewById(R.id.txtUser);
+        btnVolver = findViewById(R.id.btnVolver);
 
         btnVolver.setOnClickListener(this);
         txtMasInfo.setOnClickListener(this);
+        btnVolver.setOnClickListener(this);
 
         user = Preferences.getUserData(this);
 

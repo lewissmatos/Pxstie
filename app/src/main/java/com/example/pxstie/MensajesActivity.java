@@ -42,9 +42,9 @@ public class MensajesActivity extends AppCompatActivity implements View.OnClickL
     }
     private ArrayList<Mensajes> getMensasjeslList() {
         ArrayList<Mensajes> mensajes = new ArrayList<>();
-        mensajes.add(new Mensajes(R.drawable.perfil3, "Lewis Matos", "klk vamo a bebe romo?"));
-        mensajes.add(new Mensajes(R.drawable.alofoke, "La Mente Sicaria", "aki en la villa nama se escuchan dos cosas: La Mente y la Sicaria"));
-        mensajes.add(new Mensajes(R.drawable.pan, "Pedro Matos", "Como ta la cosa por allá? y mi familia??"));
+        mensajes.add(new Mensajes(R.drawable.nombre, "Lewis Matos", "klk vamo a bebe romo?"));
+        mensajes.add(new Mensajes(R.drawable.nombre, "La Mente Sicaria", "aki en la villa nama se escuchan dos cosas: La Mente y la Sicaria"));
+        mensajes.add(new Mensajes(R.drawable.nombre, "Pedro Matos", "Como ta la cosa por allá? y mi familia??"));
         return mensajes;
     }
 }

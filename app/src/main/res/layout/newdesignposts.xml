@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
+    android:layout_marginBottom="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent"
     android:orientation="vertical">
@@ -11,7 +11,7 @@
             android:id="@+id/rltLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="14dp"
+            android:padding="10dp"
             android:background="@color/blanco">
 
             <ImageView
@@ -27,13 +27,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="12dp"
                 android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="28dp"
+                app:cardCornerRadius="20dp"
                 >
                 <ImageView
                     android:id="@+id/imgUser"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    app:srcCompat="@drawable/el_lidel" />
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:tint="@color/negro"
+                    app:srcCompat="@drawable/nombre"/>
             </androidx.cardview.widget.CardView>
 
 
@@ -53,26 +54,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/profile"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="6dp"
-                android:maxLength="50"
+                android:maxLength="74"
                 android:fontFamily="@font/roboto_light"
                 android:text="gracia papá dio otro día sin ser neybero"
                 android:textColor="#333333"
                 android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ver más"
-                android:textColor="@color/negro"
-                android:textStyle="bold"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_below="@+id/txtCaption"
-                android:layout_toLeftOf="@id/like"
-                >
-
-            </TextView>
 
             <TextView
                 android:id="@+id/txtFecha"
@@ -80,20 +68,20 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtNom"
                 android:layout_toRightOf="@id/profile"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:fontFamily="@font/roboto_light"
                 android:text="07/02/2020"
                 android:layout_marginBottom="6dp"
                 android:textColor="#878787"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
             <ImageView
                 android:id="@+id/estar"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/estrella_llena"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/fire_activo"
                 android:layout_below="@id/txtCaption"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="3dp"/>
 
             <TextView
@@ -102,25 +90,32 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtCaption"
                 android:layout_toRightOf="@id/estar"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="4dp"
                 android:inputType="number"
                 android:text="00"
                 android:textStyle="bold"
                 android:textColor="@color/rose"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/comentar"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_below="@+id/txtCaption"
+                android:layout_toLeftOf="@id/like"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/comentario"/>
 
             <ImageView
                 android:id="@+id/like"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_below="@+id/txtCaption"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
-                app:srcCompat="@drawable/estrella_normal">
-
-            </ImageView>
-
+                app:srcCompat="@drawable/fire"/>
 
             <TextView
                 android:id="@+id/idPost"
@@ -139,6 +134,14 @@
 
             </TextView>
 
-        </RelativeLayout>
 
+        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:orientation="vertical"
+                android:background="#E6E6E6"
+                />
 </LinearLayout>
